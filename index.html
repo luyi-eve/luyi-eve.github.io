@@ -3,36 +3,140 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eve Lu: portfolio</title>
+    <title>Eve Lu</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fascinate Inline">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB Garamond">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didot">
+
+    <!--This is for icons button-->
     <script src="https://kit.fontawesome.com/a2143a8170.js" crossorigin="anonymous"></script>
 
-    <!--Fonts style-->
+    <!--BG Style-->
     <style>
-      .p1 {font-family: "Times New Roman", Times, serif;}
-      .p2 {font-family: "Fascinate Inline", sans-serif;}
-      .p4 {font-family: "Cinzel"}
+      .bg {
+          background-color: rgb(255, 255, 255);
+      }
     </style>
 
-    <!-- div style-->
+    <!--Div Style-->
     <style>
-      div.ex1 {
-        width: 900px;
+      body {
+          margin:auto;
+          padding:50px 10px;
+      }
+
+      div.introduction {
+          margin:auto;
+          max-width: 700px;
+          text-align: center;
+      }
+
+      div.intro-pop-up {
+        border:0.8px; 
+        border-style:dotted; 
+        border-color:#0d0d0d; 
+        padding: 0.8em;
+      }
+
+      div.article {
+        max-width: 1200px;
         margin: auto;
       }
+
+      div.video {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      div.card-video {
+        min-width: 300px;
+        min-height:168.75px;
+      }
+
+      .card-item {
+        width: 320px;
+      }
+
     </style>
-    
-    <!-- icon style-->
+
+    <!--grid style-->
+     <style>
+      .columns-article-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /**grid-auto-rows: minmax(100px, auto);**/
+        column-gap: 3rem;
+        row-gap: 2em;
+      }
+
+      .columns-video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /**grid-auto-rows: minmax(100px, auto);**/
+        column-gap: 2.5rem;
+        row-gap: 0rem;
+      }
+
+    </style>
+
+    <!--Text style-->
     <style>
-       i.padding {
-        padding-left: 30px;
+      h1.headline {
+        font-family:"Didot";
+        font-size: 4rem;
+      }
+
+      p.subhead {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 23px;
+        font-weight: 600px;
+        text-align: center;
       }
       
-      i.transparency {
-        opacity: 0.4;
+      p.subhead-2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        font-weight: 400px;
+        text-align: justify;
       }
+
+      p.subhead-3 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        font-weight: 400px;
+      }
+
+      h2.subhead {
+        font-family:"EB Garamond";
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 10px;
+        margin-bottom: 40px;
+      }
+
+      p.subtitle {
+        font-family:"EB Garamond";
+        font-size: 25px;
+        font-weight: 600;
+        text-align: left;
+      }
+
+      p.text {
+        font-family:"EB Garamond";
+        text-align:left;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+    </style>
+
+    <!-- icon style-->
+    <style>
+      i.padding {padding-left: 30px;}
+      i.transparency {opacity: 0.4;}
     </style>
       
     <!--line style-->
@@ -41,134 +145,420 @@
       width: 72%;
       margin: auto;
     }
+  
     </style>
 
   </head>
 
-  <body>
-
-<section class="section container">
-<div class="content ex1">
-    <h1 class="p2 title is-1">Yi (Eve) Lu</h1>
-    <p></p>
-    <p class="p1 subtitle is-5"><strong>Data visualization </strong>| Documentary | Journalist | She/hers</p>
-    <p></p>
-    <span class="tag is-info is-light">#multiculture</span> 
-    <span class="tag is-info is-light">#climatechange</span>
-    <span class="tag is-info is-light">#politicalscience</span>
-    <br>
-    <br>
-    <p class="p1 title is-5">
-      "Hi, there! My name is Yi Lu and my friends call me Eve."
-    </p>
-    <p class="p1 title is-5">
-      "I am a data journalist🎨 and an occasional videographer🎬"
-    </p>
-    <p> 
-      Currently, Eve is a Jouranlism graduate student at <span>University of Miami</span>, covering issues in Miami-Dade County and South Miami.
-    </p>
-    <p>
-      Previously, Eve interned for Bytedance as an editor and was an TV show director assistant at The International Channel Shanghai. She also worked as a baby journalist for Chinese newspapers Jinling Evening News and Farmers' Daily.
-    </p>
-    <P>
-      Eve grew up in the Chinese city of Shanghai and speaks English and Mandarin. She graduated from Shanghai University with a bachelor's degree in Journalism.
-    </P>
-    <p></p>
-    <div class="four-icon">
-      <a href="https://github.com/luyi-eve" title="Github" target="_blank"><span class="title"><i class="fab fa-github fa-2xs transparency"></i></span><a>
-      <a href="https://twitter.com/luyi_2021" title="Twitter" target="_blank"><span class="title"><i class="fab fa-twitter padding fa-2xs transparency"></i></span><a>
-      <a href="https://www.instagram.com/eseve__ly/" title="Instagram" target="_blank"><span class="title"><i class="fa-brands fa-instagram padding fa-2xs transparency"></i></span><a>
-      <a href="eseve@live.com" target="_top" title="E-mail"><span class="title"><i class="fas fa-envelope padding fa-2xs transparency"></i></span><a>
+  <body class="bg">
+    <div class="introduction">
+      <h1 class="headline">Yi (Eve) Lu</h1>
+      <br>
+      <p class="subhead">
+        <strong>Data visualization </strong>| Documentary | Journalist | She/hers
+      </p>
+      <br>
+      <span class="tag is-info is-light">#multiculture</span> 
+      <span class="tag is-info is-light">#climatechange</span>
+      <span class="tag is-info is-light">#politicalscience</span>
+      <br>
+      <br>
+      <p class="subhead">
+        Hi! My name is <strong>Yi Lu </strong>and my friends call me <strong>Eve ✨</strong>. 
+      </p>
+      <br>
+      <p class="subhead-2">
+        - Currently, I'm a Jouranlism master's student at <span style="background-color:#fffade">University of Miami</span>, covering issues in Miami-Dade County and South Florida.
+      </p>
+      <br>
+      <div class="intro-pop-up">
+          <p class="subhead-3" style="color:#3f4b9c">
+          - I'm learning data journalism and what I can do: Python (Pandas/BeautifulSoup, etc.), Illustrator (Ai2html), Datawrapper, Html/CSS, D3.js
+        </p>
+       
+      </div>
+      <br>
+      <p class="subhead-2">
+        - Previously, I worked for <span style="background-color:#D2E1C8">Bytedance</span> as an editor and was an TV show director assistant at The International Channel Shanghai. I also wrote for Chinese newspapers Jinling Evening News and Farmers' Daily.
+      </p>
+      <br>
+      <P class="subhead-2">
+        - I grew up in the Chinese city of Shanghai and speaks <span style="background-color:#FEE4A6">English and Mandarin</span>. In 2020, I graduated from <span style="background-color:#F9C4AA">Shanghai University</span> with a bachelor's degree in Journalism.
+      </P>
+      <br>
+      <br>
+      <div class="four-icon">
+        <a href="https://github.com/luyi-eve" title="Github" target="_blank"><span class="title"><i class="fab fa-github fa-2xs transparency"></i></span><a>
+        <a href="https://twitter.com/luyi_2021" title="Twitter" target="_blank"><span class="title"><i class="fab fa-twitter padding fa-2xs transparency"></i></span><a>
+        <a href="https://www.instagram.com/eseve__ly/" title="Instagram" target="_blank"><span class="title"><i class="fa-brands fa-instagram padding fa-2xs transparency"></i></span><a>
+        <a href="eseve@live.com" target="_top" title="E-mail"><span class="title"><i class="fas fa-envelope padding fa-2xs transparency"></i></span><a>
+      </div>
     </div>
 
-</div>
-<hr>
-<section class="section container">
-  <div class="content ex1">
-    <p class="p4 title is-4 has-text-centered">Here's my work</p>
-    
+    <br>
+    <hr>
+    <br>
+    <br>   
+    <a></a>
+    <a></a> 
 
-  </div>
-</section>
+    <!--data stories below-->
+    <div class="article">
+      <h2 class = "subhead">DATA JOURNALISM</h2>
+      <div class="columns-article-grid">
+        <div class="card-item" style="height:30rem">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/chicago-dead-zones/">
+                <img src="chicago-dead-zones.png" alt="coming soon">
+              </a>            
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://luyi-eve.github.io/chicago-dead-zones/">Chicago's Dead Zones</a></p>
+              <p class="text">
+                Welcome, Welcome, Welcome!
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag is-light">Ai2html/Scrollytelling</span>
+                <span class="tag is-light">Mapbox</span>
+                <span class="tag is-light">QGIS</span>
+                <span class="tag is-light">Selenium/Pandas</span>
+                <span class="tag is-light">Html/Css</span>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="card-item" style="height:30rem">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/movies-self-analysis/">
+                <img src="movies-self-analysis.png" alt="coming soon">
+              </a>            
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://luyi-eve.github.io/movies-self-analysis/">Why I Watched That Movie At That Time?</a></p>
+              <p class="text">
+                A Deep Self Analysis...?
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag is-light">Ai2html/Scrollytelling</span>
+                <span class="tag is-light">Datawrapper</span>
+                <span class="tag is-light">BeautifulSoup/Pandas</span>
+                <span class="tag is-light">Html/Css</span>
+                <!--<span class="tag is-danger is-light">Ai2html/Scrollytelling</span>
+                <span class="tag is-warning is-info is-light">Datawrapper</span>
+                <span class="tag is-success is-light">BeautifulSoup/Pandas</span>
+                <span class="tag is-info is-light">Html/Css</span>-->
+              </div>
+            </div>
+          </div>
+        </div>    
+        <div class="card-item" style="height:30rem">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/cool-it-newyorkers/">
+                <img src="cool-it-nyc.png" alt="coming soon">
+              </a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://luyi-eve.github.io/cool-it-newyorkers/">Cool it ?! New Yorkers</a></p>
+              <p class="text">
+                A guide towards New York City's public cooling features during extreme heat emergencies.
+              </p>          
+              <div class="tags">
+                <span class="tag is-light">Datawrapper</span>
+                <span class="tag is-light">Pandas</span>
+                <span class="tag is-light">Html/Css</span>
+                <!--<span class="tag is-warning is-info is-light">Datawrapper</span>
+                <span class="tag is-success is-light">Pandas</span>
+                <span class="tag is-info is-light">Html/Css</span>-->
+              </div>     
+            </div>
+          </div>
+        </div>
+        <div class="card-item" style="height:30rem">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/project-one">
+                <img src="asian-hate.png" alt="coming soon">
+              </a>            
+            </figure>
+          </div>  
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://www.google.com">Who Is Being Hunted Where?</a></p>
+              <p class="text">
+                Anti-Asian Violence During COVID.
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag">Illustrator</span>
+                <span class="tag">Html/css</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item" style="height:30rem">
+          <div class="card-image">
+            <figure class="image">
+              <a href="url">
+                <img src="" alt="coming soon">
+              </a>            
+            </figure>
+          </div>  
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://www.google.com">This is a title</a></p>
+              <p class="text">
+                this is a caption
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag"># Illustrator</span>
+                <span class="tag"># Html/css</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-item" style="height:30rem">
+          <div class="card-image">
+            <figure class="image">
+              <a href="">
+                <img src="" alt="coming soon">
+              </a>            
+            </figure>
+          </div>  
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://www.google.com">This is a title</a></p>
+              <p class="text">
+                this is a caption
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag"># Illustrator</span>
+                <span class="tag"># Html/css</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!--print stories below-->
+    <div class="article">
+      <h2 class = "subhead">PRINT JOURNALISM</h2>
+      <div class="columns-article-grid">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/cool-it-newyorkers/">
+                <img src="" alt="coming soon">
+              </a>             
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle">Who will win the GAME ?</p>
+              <p class="text">
+                After the 13-story Champlain Towers South complex fell in last June, killing 98 people. 
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag">Package</span>
+                <span class="tag">Bulma</span>
+                <span class="tag">Bulma</span>
+              </div>       
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/cool-it-newyorkers/">
+                <img src="" alt="coming soon">
+              </a>             
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle">Truth or Empty Promise ?</p>
+              <p class="text">
+                Is there the alternative housing for the sister building of fallen Champlain towers south as local government promised?
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag">Package</span>
+                <span class="tag">Bulma</span>
+                <span class="tag">Bulma</span>
+              </div>       
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://www.themiamihurricane.com/2021/09/24/three-months-later-in-surfside-some-mourning-some-moving-on/">
+                <img src="three-month-surfside.png" alt="coming soon">
+              </a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://www.themiamihurricane.com/2021/09/24/three-months-later-in-surfside-some-mourning-some-moving-on/">Three months later in Surfside</a></p>
+              <p class="text">
+                Some mourning, some moving on.
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag">print</span>
+                <span class="tag">Bulma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/cool-it-newyorkers/">
+                <img src="" alt="coming soon">
+              </a>             
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle">One year after Atlanta shooting, how is Asian hate sentiment in South Florida?
+              </p>
+              <p class="text">
+                The ongoing Anti-Asian sentiment still seems to be continuing, even if the country is ending the mask mandates with everyone adjusting to the new normal.              
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag">Package</span>
+                <span class="tag">Bulma</span>
+                <span class="tag">Bulma</span>
+              </div>       
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://luyi-eve.github.io/cool-it-newyorkers/">
+                <img src="" alt="coming soon">
+              </a>             
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle">Miami has no Chinatown, but...why?</p>
+              <p class="text">
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag">Package</span>
+                <span class="tag">Bulma</span>
+                <span class="tag">Bulma</span>
+              </div>       
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image">
+              <a href="https://issuu.com/abbyleeg/docs/winter21-issuu_compressed_/26">
+                <img src="back-on-screen.png" alt="coming soon">
+              </a>             
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="content">
+              <p class="subtitle"><a href="https://issuu.com/abbyleeg/docs/winter21-issuu_compressed_/26">Back On Screen</a></p>
+              <p class="text">
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+              </p>
+              <div class="tags is-info is-light">
+                <span class="tag">Package</span>
+                <span class="tag">Bulma</span>
+                <span class="tag">Bulma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    <!--video stories below>-->
+    <div class="video">
+      <h2 class = "subhead">VISUAL STORYTELLING</h2>
+      <div class="columns-video-grid">
+        <div class="card-video">
+          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/fxK_2Dpu0nA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br>
+          <br>
+          <p class="subtitle"><a href="https://luyi-eve.github.io/cool-it-newyorkers/"><a href="https://youtu.be/fxK_2Dpu0nA">Shanghai Lockdown 2022</a></p>
+          <p class="text"></p>  
+        </div>
+         <div class="card-video">
+            <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/NfCUjJpLhek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            <br>
+            <p class="subtitle"><a href="https://youtu.be/NfCUjJpLhek">Food Desert in Overtown</a></p>
+            <p class="text"></p>
+        </div>
+        <div class="card-video">
+          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/YokNYODZe3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br>
+          <br>
+          <p class="subtitle"><a href="https://youtu.be/YokNYODZe3c">How Microchips Shortage Impacted Us?</a></p>
+          <p class="text"></p>
+        </div>
+        <div class="card-video">
+          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/Fd9q-lt4dck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          <br>
+          <br>
+          <p class="subtitle"><a href="https://youtu.be/Fd9q-lt4dck">Cuban Domino Effect in Miami</a></p>
+          <p class="text"></p>
+        </div>
+        <div class="card-video">
+          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/wvpY_stVBVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br>
+          <br>
+          <p class="subtitle"><a href="https://youtu.be/wvpY_stVBVg">Louis Rosemont</a></p>
+          <p class="text">
+          </p>    
+        </div>
+        <div class="card-video">
+          <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/702446446?h=8c3700b2e0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Find Little Haiti"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+          <br>
+          <p class="subtitle"><a href="https://youtu.be/tT4-YImoG-o">Find Little Haiti </a></p>
+          <p class="text"></p>
+        </div>     
+        <div class="card-video">
+          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/tT4-YImoG-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+          <br>
+          <br>
+          <p class="subtitle"><a href="https://youtu.be/tT4-YImoG-o">Four Reasons to Visit NYC </a></p>
+          <p class="text"></p>
+        </div>
+        <div class="card-video">
+          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/KS841VeASVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <br>
+          <br>
+          <p class="subtitle"><a href="https://youtu.be/KS841VeASVY">A Chinese Wheat Straw Artist</a></p>
+          <p class="text"></p>
+        </div>
+        <div class="card-video">
+          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/JjuXh6kUVcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+          <br>
+          <br>
+          <p class="subtitle"><a href="https://youtu.be/tT4-YImoG-o">One Day in Asian Mart</a></p>
+          <p class="text"></p>
+        </div>
+      </div>
+    </div>
 
 </body>
 </html>
-
-<!--
-<section class="section container">
-  <div class="content ex1">
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical is-8">
-        <div class="tile">
-          <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification ">
-              <p class="title">Vertical...</p>
-              <p class="subtitle">Top tile</p>
-            </article>
-            <article class="tile is-child notification ">
-              <p class="title">...tiles</p>
-              <p class="subtitle">Bottom tile</p>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification ">
-              <p class="title">Middle tile</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/640x480.png">
-              </figure>
-            </article>
-          </div>
-        </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification ">
-            <p class="title">Wide tile</p>
-            <p class="subtitle">Aligned with the right tile</p>
-            <div class="content"> 
-            
-            </div>
-          </article>
-        </div>
-      </div>
-      <div class="tile is-parent">
-        <article class="tile is-child notification ">
-          <div class="content">
-            <p class="title">Tall tile</p>
-            <p class="subtitle">With even more content</p>
-            <div class="content">
-
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section> 
--->
-
-
-<!--
-    <div class="columns content">
-        <div class="column">
-            <h3>Project one</h3>
-            <p>A little blurb balabalablaabal!! It's amazing!! Please read more!</p>
-            <br>
-            <a class="button is-light is-small" href = "http://www.google.com">Read the story</a>
-            <a class="button is-black is-small" href = "http://www.google.com">Check the code</a>
-        </div>
-        <div class="column">
-            <h3 >Project two</h3>
-            <p>A little blurb balabalablaabal!! It's amazing!! Please read more!</p>
-        </div>
-        <div class="column">
-            <h3 >Project three</h3>
-            <p>A little blurb balabalablaabal!! It's amazing!! Please read more!</p>
-        </div>
-        <div class="column">
-            <h3 >Project four</h3>
-            <p>A little blurb balabalablaabal!! It's amazing!! Please read more!</p>
-        </div>
-    </div>
--->
-
-
