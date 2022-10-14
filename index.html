@@ -43,18 +43,22 @@
       div.article {
         max-width: 1200px;
         margin: auto;
-        overflow:auto;
+        overflow:visible;
+        /* setting overflow as visible (not auto) to make sure your border-shadow won't be cut off*/
       }
 
       div.video {
         max-width: 1200px;
         margin: auto;
-        overflow:auto;
+        overflow: visible;
+        /* setting overflow as visible (not auto) to make sure your border-shadow won't be cut off*/
       }
 
       div.card-video {
-        min-width: 300px;
-        min-height:168.75px;
+        min-width: 100%;
+        min-height:100%;
+        /*min-width:300px;
+        min-height:168.75px;*/
       }
 
       div.footer {
@@ -482,7 +486,7 @@
     <!--video stories below>-->
     <div class="video">
       <h2 class = "subhead">VISUAL STORYTELLING</h2>
-      <div class="columns-video-grid">
+      <div class="columns-video-grid">   
         <div class="card-video">
           <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/fxK_2Dpu0nA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <br>
