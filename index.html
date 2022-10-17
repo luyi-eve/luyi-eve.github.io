@@ -5,562 +5,737 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Eve Lu</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fascinate Inline">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB Garamond">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didot">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo Play">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inspiration">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+
+    <!--This is for calibri font-->
+    <link rel="stylesheet" href="calibri-font.css">
 
     <!--This is for icons button-->
     <script src="https://kit.fontawesome.com/a2143a8170.js" crossorigin="anonymous"></script>
 
-    <!--BG Style-->
+    <!--This is for image click-zoom -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        input[type=checkbox] {
+        display: none;
+        }
+
+        .container img {
+        margin: 100px;
+        transition: transform 0.25s ease;
+        cursor: zoom-in;
+        }
+
+        input[type=checkbox]:checked ~ label > img {
+        transform: scale(2);
+        cursor: zoom-out;
+        }
+
+        .w3-third img{margin-bottom: -6px; opacity: 1; cursor: zoom-in}
+        .w3-third img:hover{opacity: 1}
+        .w3-third {width: 50%}
+
+        .w3-black {background-color: whitesmoke !important;} /* customize onclick bg color */
+
+    </style>
+
+    <!--This is for squarespace css -->
+    <link rel="stylesheet" type="text/css" href="squarespace.css">
+
+    <!--text-->
+    <style>
+      h1.headline {
+        font-family:"Cairo Play";
+        font-size: 4.5rem;
+        font-weight:800;
+        text-transform: none;
+        color: #4a4a4a;
+        line-height: 1.2em;
+      }
+
+      h2.category {
+        font-family:"Cairo Play";
+        font-size: 25px;
+        font-weight: 900 !important;
+        text-align: center;
+        margin:auto;
+        padding-bottom: 2rem;
+        padding-top: 4.5rem;
+        color: #4a4a4a;
+      }
+
+      p.myname {
+        font-family:"calibri";
+        font-size: 22px;
+        font-weight: 400;
+        text-align: center;
+        color: #4a4a4a;
+        margin-bottom:0.8em;      
+      }
+
+      p.myskill {
+        font-family:"calibri";
+        font-size: 18px;
+        font-weight:400;
+        margin-bottom: 3px;
+      }
+      
+      p.mybackground {
+        font-family:"calibri";
+        font-size: 20px;
+        font-weight: 400;
+        text-align: justify;
+        color: #4a4a4a;
+        margin: 0 0 0.8em;
+      }
+
+      p.sketch {
+        font-family:"calibri";
+        font-size: 17px;
+        text-align: center;
+        color: #4a4a4a;
+      }
+
+      p.copyright {
+        font-family:"Inspiration";
+        font-weight: 800;
+        font-size: 18px;
+        font-style: italic;
+      }
+
+    </style>
+
+    <!--background-->
     <style>
       .bg {
           background-color: rgb(255, 255, 255);
       }
     </style>
 
-    <!--Div Style-->
+    <!--sections-->
     <style>
-      body {
-          margin:auto;
-          padding:50px 10px;
-      }
-
-      div.introduction {
+      #introduction {
           margin:auto;
           max-width: 700px;
           text-align: center;
       }
 
-      div.intro-pop-up {
-        border:0.8px; 
-        border-style:dotted; 
-        border-color:#0d0d0d; 
+      #pop-up {
+        border: 0.8px;
+        border-style: dotted;
+        border-color: #0d0d0d;
         padding: 0.8em;
       }
 
-      div.article {
-        max-width: 1200px;
-        margin: auto;
-        overflow:visible;
-        /* setting overflow as visible (not auto) to make sure your border-shadow won't be cut off*/
-      }
-
-      div.video {
-        max-width: 1200px;
-        margin: auto;
-        overflow: visible;
-        /* setting overflow as visible (not auto) to make sure your border-shadow won't be cut off*/
-      }
-
-      div.card-video {
-        min-width: 100%;
-        min-height:100%;
-        /*min-width:300px;
-        min-height:168.75px;*/
-      }
-
-      div.footer {
-        margin:auto;
-        max-width: 1200px;
-        text-align: center;
-      }
-      
-
     </style>
 
-    <!--grid style-->
-     <style>
-      .columns-article-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /**grid-auto-rows: minmax(100px, auto);**/
-        column-gap: 3rem;
-        row-gap: 2em;
-      }
-
-      .columns-video-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        /**grid-auto-rows: minmax(100px, auto);**/
-        column-gap: 2.5rem;
-        row-gap: 0rem;
-      }
-
-    </style>
-
-    <!--Text style-->
+    <!-- img & icon & line-->
     <style>
-      h1.headline {
-        font-family:"Didot";
-        font-size: 4rem;
-      }
-
-      p.subhead {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 23px;
-        font-weight: 600px;
-        text-align: center;
-      }
-      
-      p.subhead-2 {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 20px;
-        font-weight: 400px;
-        text-align: justify;
-      }
-
-      p.subhead-3 {
-        font-family: "Times New Roman", Times, serif;
-        font-size: 18px;
-        font-weight: 400px;
-
-      }
-
-      h2.subhead {
-        font-family:"EB Garamond";
-        font-size: 25px;
-        font-weight: 600;
-        text-align: center;
-        margin-left: 10px;
-        margin-bottom: 40px;
-      }
-
-      p.subtitle {
-        font-family:"EB Garamond";
-        font-size: 25px;
-        font-weight: 600;
-        text-align: left;
-      }
-
-      p.text {
-        font-family:"EB Garamond";
-        text-align:left;
-        font-weight: 400;
-        font-size: 16px;
-      }
-
-    </style>
-
-    <!-- icon style-->
-    <style>
+      img.responsive {height: auto;width: 100%; }
+      img.greyscale {filter: grayscale(100%);} /* not enacted */
       i.padding {padding-left: 30px;}
       i.transparency {opacity: 0.4;}
+      hr {width: 72%;margin: auto;}
     </style>
-      
-    <!--line style-->
+  
+    <!--housekeeping-->
     <style>
-    hr {
-      width: 72%;
-      margin: auto;
+      #canvas {
+        max-width: 900px;
+        margin: 10px auto;
+        padding: 0;
+      }
+
+      *, ::after, ::before {
+        box-sizing: unset;
+      }
+
+      @media only screen and (max-width: 390px) {
+          #canvas {
+          margin: 0 auto;
+          padding: 20px;
+        }
+      }
+    
+      #data #print #video #ending {
+        padding: 30px 0;
+        opacity: 1;
+        position: relative;
+      }
+
+      article, footer, header, section {
+        display: block;
+      }
+
+      #projectThumbs .wrapper {
+      width: 105.1%;
+      margin-left: -5.1%;
+      margin-top: -5.1%;      
+    }
+
+      #projectThumbs .project {
+      float: left;
+      margin-left: 4.85252141%;
+      margin-top: 5.1%;
+      /*width: 28.48081193%;*/ 
+      cursor: pointer;
+      -webkit-transform: translatez(0);
     }
   
-    </style>
+    @media only screen and (max-width: 500px) {
+      #projectThumbs .project:nth-child(n+1) {
+        clear: left !important;
+        margin: auto;
+        width: 100%;
+      }
+    }
 
+    #projectThumbs .project .project-image .card {
+      background: #eee;
+      margin-bottom: 5.1%;
+      padding-bottom: 100%;
+      line-height: 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      opacity: 1;
+      -webkit-transition: opacity .14s ease-out;
+      transition: opacity .14s ease-out;
+    }
+
+
+    element {
+      overflow: hidden;
+    }
+
+    #projectThumbs .project .project-image .content-fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media only screen and (max-width: 750px) {
+      iframe:nth-child(n+1) {
+        width: 367.85px;
+        height: 367.85px;
+      }
+    }
+
+    @media only screen and (max-width: 500px) {
+      iframe:nth-child(n+1) {
+        width: 530px;
+        height: 530px;
+      }
+    }
+
+
+    #projectThumbs .project .project-item-count {
+      display: none;
+    }
+
+    #projectThumbs .project .project-title {
+        font-family: "calibri";
+        font-weight: 400;
+        line-height: 1em;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0em;
+        color: #737373;
+    }
+
+    </style>
   </head>
 
-  <body class="bg">
-    <div class="introduction">
-        <h1 class="headline">Yi (Eve) Lu</h1>
-        <br>
-        <p class="subhead">
-          Filmmaker | <strong>Data Journalist </strong> | She/hers
-        </p>
-        <br>
-        <span class="tag is-info is-light">#gender disparities</span> 
-        <span class="tag is-info is-light">#climate change</span>
-        <span class="tag is-info is-light">#multiculturalism</span>
-        <br>
-        <br>
-        <p class="subhead">
-          Hi! My name is <strong>Yi Lu </strong>and my friends call me <strong>Eve ✨</strong>. 
-        </p>
-        <br>
-        <div class="intro-pop-up">
-          <p class="subhead-3" style="color:#3f4b9c">
-            - Things I can do: Python (Pandas, BeautifulSoup, Selenium), HTML/CSS, JavaScript/D3.js, Adobe Illustrator, Mapbox, QGIS, Datawrapper/Flourish
-          </p>
-        </div>
-        <br>
-        <p class="subhead-2">
-          - Currently, I'm a Jouranlism master's student at <span style="background-color:#fffade">University of Miami</span>, covering issues in Miami-Dade County and South Florida. I'm also a recent alumna of the <span style="background-color:#f6dcf0">Lede Program 2022</span> at Columbia Journalism School.
-        </p>
-        <br>
-        <p class="subhead-2">
-          - Previously, I worked for <span style="background-color:#D2E1C8">Bytedance</span> as an editor and was an TV show director assistant at The International Channel Shanghai. I also wrote for Chinese newspapers Jinling Evening News and Farmers' Daily.
-        </p>
-        <br>
-        <p class="subhead-2">
-          - I grew up in the Chinese city of Shanghai and speak <span style="background-color:#FEE4A6">English and Mandarin</span>. In 2020, I graduated from <span style="background-color:#F9C4AA">Shanghai University</span> with a bachelor's degree in Journalism.
-        </p>      
-        <br>
-        <br>
-        <div class="four-icon">
-          <a href="https://github.com/luyi-eve" title="Github" target="_blank"><span class="title"><i class="fab fa-github fa-2xs transparency"></i></span><a>
-          <a href="https://twitter.com/luyi_2021" title="Twitter" target="_blank"><span class="title"><i class="fab fa-twitter padding fa-2xs transparency"></i></span><a>
-          <a href="https://www.instagram.com/eseve__ly/" title="Instagram" target="_blank"><span class="title"><i class="fa-brands fa-instagram padding fa-2xs transparency"></i></span><a>
-          <a href="mailto:eseve@live.com"><span class="title"><i class="fas fa-envelope padding fa-2xs transparency"></i></span></a>
-        </div>
+<body class="bg">
+  <div id="introduction">
+    <h1 class="headline">Yi (Eve) Lu</h1>
+    <p class="myname">Filmmaker | <strong>Data Journalist </strong> | She/her/hers</p>
+    <span class="tag is-info is-light" style="font-size: 0.9rem;">#gender disparities</span> 
+    <span class="tag is-info is-light" style="font-size: 0.9rem;">#climate change</span>
+    <span class="tag is-info is-light" style="font-size: 0.9rem;">#multiculturalism</span>
+    <br>
+    <br>
+    <p class="myname">
+      Hi! My name is <strong>Yi Lu </strong>and my friends call me <strong>✨ Eve ✨</strong>
+    </p>
+    <div id="pop-up">
+      <p class="myskill" style="color:#3f4b9c">
+        - Things I can do: Python (Pandas, BeautifulSoup, Selenium), HTML/CSS, JavaScript/D3.js, Adobe Illustrator, Mapbox, QGIS, Datawrapper/Flourish
+      </p>
     </div>
+    <br>
+    <p class="mybackground">
+      - Currently, I'm a Jouranlism master's student at <span style="background-color:#fffade">University of Miami</span>, covering issues in Miami-Dade County and South Florida. I'm also a recent alumna of the <span style="background-color:#f6dcf0">Lede Program 2022</span> at Columbia Journalism School.
+    </p>
+    <br>
+    <p class="mybackground">
+      - Previously, I worked for <span style="background-color:#D2E1C8">Bytedance</span> as an editor and was an TV show director assistant at The International Channel Shanghai. I also wrote for Chinese newspapers Jinling Evening News and Farmers' Daily.
+    </p>
+    <br>
+    <p class="mybackground">
+      - I grew up in the Chinese city of Shanghai and speak <span style="background-color:#FEE4A6">English and Mandarin</span>. In 2020, I graduated from <span style="background-color:#F9C4AA">Shanghai University</span> with a bachelor's degree in Journalism.
+    </p>      
+    <br>
+    <div id="icon">
+      <a href="https://github.com/luyi-eve" title="Github" target="_blank"><span class="title"><i class="fab fa-github fa-2xs transparency"></i></span><a>
+      <a href="https://twitter.com/luyi_2021" title="Twitter" target="_blank"><span class="title"><i class="fab fa-twitter padding fa-2xs transparency"></i></span><a>
+      <a href="https://www.instagram.com/eseve__ly/" title="Instagram" target="_blank"><span class="title"><i class="fa-brands fa-instagram padding fa-2xs transparency"></i></span><a>
+      <a href="mailto:eseve@live.com"><span class="title"><i class="fas fa-envelope padding fa-2xs transparency"></i></span></a>
+    </div>
+  </div>
 
     <br>
     <hr>
-    <br>
-    <br>   
-    <a></a>
-    <a></a> 
 
-    <!--data stories below-->
-    <div class="article">
-      <h2 class = "subhead">DATA JOURNALISM</h2>
-      <div class="columns-article-grid">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/words-by-maugham/">
-                <img src="Words by Maugham.png" alt="coming soon">
-              </a>            
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://luyi-eve.github.io/words-by-maugham/">Words by Maugham</a></p>
-              <p class="text">
-                Sort through W. Somerset Maugham's 25 books, short stories and plays!
-              </p>
-              <div class="tags is-info is-light">
-                <span class="tag is-light">Text Analysis</span>
-                <span class="tag is-light">Flourish</span>
-                <span class="tag is-light">BeautifulSoup/Pandas</span>
-                <span class="tag is-light">Html/CSS</span>
+  <div id="canvas" class="article">
+      <!-- DATA SECTION-->
+      <section id="data" role="main">
+          <div id="projectThumbs">
+            <h2 class="category" style="padding-top: 2rem;">DATA VISUALIZATION</h2>
+              <div class="wrapper">
+                  <!--<a class="project" href="">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img src=".png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">0</div>
+                      </div>
+                      <div class="project-title">Capstone Project</div>
+                    </div>
+                  </a>-->
+                  <a class="project" href="https://luyi-eve.github.io/words-by-maugham/">
+                      <div>
+                        <div class="project-image">
+                          <div class="card">
+                            <div class="content-fill" style="overflow: hidden;">
+                              <img class="responsive" src="words-by-maugham.png" alt="coming soon">
+                            </div>
+                          </div>
+                          <div class="project-item-count">1</div>
+                        </div>
+                        <div class="project-title" >Words by Maugham</div>
+                      </div>
+                  </a>
+                  <a class="project" href="https://luyi-eve.github.io/chicago-dead-zones/">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img class="responsive" src="chicago-dead-zones.png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">2</div>
+                      </div>
+                      <div class="project-title">Chicago's Dead Zones</div>
+                    </div>
+                  </a>
+                  <a class="project" href="https://luyi-eve.github.io/movies-self-analysis/">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img class="responsive" src="movies-self-analysis.png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">3</div>
+                      </div>
+                      <div class="project-title">Why I Watched That Movie At That Time?</div>
+                    </div>
+                  </a>
+                  <a class="project" href="https://luyi-eve.github.io/cool-it-newyorkers/">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img class="responsive" src="cool-it-nyc.png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">4</div>
+                      </div>
+                      <div class="project-title">Cool it ?! New Yorkers</div>
+                    </div>
+                  </a>
+                  <a class="project" href="https://luyi-eve.github.io/project-one">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img class="responsive" src="asian-hate.png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">5</div>
+                      </div>
+                      <div class="project-title">Who Is Being Hunted Where?</div>
+                    </div>
+                  </a>
+                  <a class="project" href="https://luyi-eve.github.io/the-biggest-weapon/">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img class="responsive" src="the-biggest-weapon4.png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">6</div>
+                      </div>
+                      <div class="project-title">The Biggest Weapon</div>
+                    </div>
+                  </a>
+                  
               </div>
-            </div>
           </div>
-        </div>  
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/chicago-dead-zones/">
-                <img src="chicago-dead-zones.png" alt="coming soon">
-              </a>            
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://luyi-eve.github.io/chicago-dead-zones/">Chicago's Dead Zones</a></p>
-              <p class="text">
-                Welcome, Welcome, Welcome!
-              </p>
-              <div class="tags is-info is-light">
-                <span class="tag is-light">Ai2html/Scrollytelling</span>
-                <span class="tag is-light">Mapbox</span>
-                <span class="tag is-light">QGIS</span>
-                <span class="tag is-light">Selenium/Pandas</span>
-                <span class="tag is-light">Html/CSS</span>
-              </div>
-            </div>
-          </div>
-        </div>  
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/movies-self-analysis/">
-                <img src="movies-self-analysis.png" alt="coming soon">
-              </a>            
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://luyi-eve.github.io/movies-self-analysis/">Why I Watched That Movie At That Time?</a></p>
-              <p class="text">
-                A Deep Self Analysis...?
-              </p>
-              <div class="tags is-info is-light">
-                <span class="tag is-light">Ai2html/Scrollytelling</span>
-                <span class="tag is-light">Datawrapper</span>
-                <span class="tag is-light">BeautifulSoup/Pandas</span>
-                <span class="tag is-light">Html/CSS</span>
-                <!--<span class="tag is-danger is-light">Ai2html/Scrollytelling</span>
-                <span class="tag is-warning is-info is-light">Datawrapper</span>
-                <span class="tag is-success is-light">BeautifulSoup/Pandas</span>
-                <span class="tag is-info is-light">Html/Css</span>-->
-              </div>
-            </div>
-          </div>
-        </div>    
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/cool-it-newyorkers/">
-                <img src="cool-it-nyc.png" alt="coming soon">
-              </a>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://luyi-eve.github.io/cool-it-newyorkers/">Cool it ?! New Yorkers</a></p>
-              <p class="text">
-                A guide towards New York City's public cooling features during extreme heat emergencies.
-              </p>          
-              <div class="tags">
-                <span class="tag is-light">Datawrapper</span>
-                <span class="tag is-light">Pandas</span>
-                <span class="tag is-light">Html/CSS</span>
-                <!--<span class="tag is-warning is-info is-light">Datawrapper</span>
-                <span class="tag is-success is-light">Pandas</span>
-                <span class="tag is-info is-light">Html/Css</span>-->
-              </div>     
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/project-one">
-                <img src="asian-hate.png" alt="coming soon">
-              </a>            
-            </figure>
-          </div>  
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://www.google.com">Who Is Being Hunted Where?</a></p>
-              <p class="text">
-                Anti-Asian Violence During COVID.
-              </p>
-              <div class="tags is-info is-light">
-                <span class="tag">Illustrator</span>
-                <span class="tag">Html/CSS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/the-biggest-weapon/">
-                <img src="the-biggest-weapon4.png" alt="coming soon">
-              </a>            
-            </figure>
-          </div>  
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://luyi-eve.github.io/the-biggest-weapon/">The Biggest Weapon</a></p>
-              <p class="text">
-                How Russian crude oil shake the market as Ukraine conflict looms?
-              </p>
-              <div class="tags is-info is-light">
-                <span class="tag">Illustrator</span>
-                <span class="tag">Html/CSS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-
-    <!--print stories below-->
-    <div class="article">
-      <h2 class = "subhead">PRINT JOURNALISM</h2>
-      <div class="columns-article-grid">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/2022-surfside-election/">
-                <img src="surfside-election.png" alt="coming soon">
-              </a>             
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle">
-                <a href="https://luyi-eve.github.io/2022-surfside-election/">2022 Surfside Election</a>
-                </p>
-              <p class="text">
-                Surfside voters went to the polls March 15 with overriding concerns that emerged following the collapse of Champlain Towers South.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/surfside-sister-building/">
-                <img src="sister-building-surfside.png" alt="coming soon">
-              </a>             
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle">
-                <a href="https://luyi-eve.github.io/surfside-sister-building/">Truth or Empty Promise ?</a>
-              </p>
-              <p class="text">
-                Did the alternative housing truly exist, or was it just an empty promise made by the local government?              
-              </p>  
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://www.themiamihurricane.com/2021/09/24/three-months-later-in-surfside-some-mourning-some-moving-on/">
-                <img src="three-month-surfside.png" alt="coming soon">
-              </a>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://www.themiamihurricane.com/2021/09/24/three-months-later-in-surfside-some-mourning-some-moving-on/">Three months later in Surfside</a></p>
-              <p class="text">
-                Some mourning, some moving on.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/after-atlanta-shooting/">
-                <img src="Atlanta-shooting-Andrew-Ratto.png" alt="coming soon">
-              </a>             
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle">
-                <a href="https://luyi-eve.github.io/after-atlanta-shooting/">One year after Atlanta shooting</a>
-              </p>
-              <p class="text">
-                How is Asian hate sentiment in South Florida?         
-              </p>  
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://luyi-eve.github.io/miami-planned-chinatown/">
-                <img src="miami-planned-chinatown.png" alt="coming soon">
-              </a>             
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle">
-                <a href="https://luyi-eve.github.io/miami-planned-chinatown/"> 
-                  Chinatown No More
+      </section>
+      <!-- REPORTING SECTION-->
+      <section id="print" role="main">
+        <div id="projectThumbs">
+          <h2 class="category">NEWS REPORTING</h2>
+            <div class="wrapper" >
+                <a class="project" href="https://luyi-eve.github.io/2022-surfside-election/">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img class="responsive " src="surfside-election.png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">1</div>
+                      </div>
+                      <div class="project-title">2022 Surfside Election</div>
+                    </div>
                 </a>
-                </p>
-              <p class="text">
-                North Miami turned the six-year-long plan to a mixture of Asian and Caribbean cultures 
-                due to the domestic xenophobia and the loss of Chinese investors.              
-              </p>
+                <a class="project" href="https://luyi-eve.github.io/surfside-sister-building/">
+                  <div>
+                    <div class="project-image">
+                      <div class="card">
+                        <div class="content-fill" style="overflow: hidden;">
+                          <img class="responsive" src="sister-building-surfside.png" alt="coming soon">
+                        </div>
+                      </div>
+                      <div class="project-item-count">3</div>
+                    </div>
+                    <div class="project-title">Surfside Sister Building</div>
+                  </div>
+                </a>
+                <a class="project" href="https://www.themiamihurricane.com/2021/09/24/three-months-later-in-surfside-some-mourning-some-moving-on/">
+                  <div>
+                    <div class="project-image">
+                      <div class="card">
+                        <div class="content-fill" style="overflow: hidden;">
+                          <img class="responsive" src="three-month-surfside.png" alt="coming soon">
+                        </div>
+                      </div>
+                      <div class="project-item-count">2</div>
+                    </div>
+                    <div class="project-title">Three months later in Surfside</div>
+                  </div>
+                </a>    
+                <a class="project" href="https://luyi-eve.github.io/after-atlanta-shooting/">
+                  <div>
+                    <div class="project-image">
+                      <div class="card">
+                        <div class="content-fill" style="overflow: hidden;">
+                          <img class="responsive" src="atlanta-shooting.png" alt="Photo by https://unsplash.com/@ninjason">
+                        </div>
+                      </div>
+                      <div class="project-item-count">4</div>
+                    </div>
+                    <div class="project-title">One year after Atlanta shooting</div>
+                  </div>
+                </a>
+                <a class="project" href="https://luyi-eve.github.io/miami-planned-chinatown/">
+                  <div>
+                    <div class="project-image">
+                      <div class="card">
+                        <div class="content-fill" style="overflow: hidden;">
+                          <img class="responsive" src="miami-planned-chinatown.png" alt="coming soon">
+                        </div>
+                      </div>
+                      <div class="project-item-count">5</div>
+                    </div>
+                    <div class="project-title">Chinatown No More</div>
+                  </div>
+                </a>
+                <a class="project" href="https://issuu.com/abbyleeg/docs/winter21-issuu_compressed_/26">
+                  <div>
+                    <div class="project-image">
+                      <div class="card">
+                        <div class="content-fill" style="overflow: hidden;">
+                          <img class="responsive" src="back-on-screen.png" alt="coming soon">
+                        </div>
+                      </div>
+                      <div class="project-item-count">6</div>
+                    </div>
+                    <div class="project-title">Back On Screen</div>
+                  </div>
+                </a>
             </div>
-          </div>
         </div>
-        <div class="card">
-          <div class="card-image">
-            <figure class="image">
-              <a href="https://issuu.com/abbyleeg/docs/winter21-issuu_compressed_/26">
-                <img src="back-on-screen.png" alt="coming soon">
-              </a>             
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              <p class="subtitle"><a href="https://issuu.com/abbyleeg/docs/winter21-issuu_compressed_/26">Back On Screen</a></p>
-              <p class="text">
-                Closed during the height of the pandemic, big screens across the nation have been tempting home-bound, stir-crazy movie-goers back into theaters. Most South Florida cinemas began reopening with reduced movie showings and theater hours about a year ago.
-              </p>
+      </section>
+      <!-- VIDEO SECTION-->
+      <section id="video" role="main">
+        <div id="projectThumbs">
+          <h2 class="category">DOCUMENTARY</h2>
+            <div class="wrapper">
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4" src="https://www.youtube.com/embed/fxK_2Dpu0nA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="project-item-count">1</div>
+                </div>
+                <div class="project-title">Shanghai Lockdown 2022</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4" src="https://www.youtube.com/embed/NfCUjJpLhek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="project-item-count">2</div>
+                </div>
+                <div class="project-title">Food Desert in Overtown</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4" src="https://www.youtube.com/embed/YokNYODZe3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="project-item-count">3</div>
+                </div>
+                <div class="project-title">How Microchips Shortage Impacted Us?</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4" src="https://www.youtube.com/embed/Fd9q-lt4dck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+                    </div>
+                  </div>
+                  <div class="project-item-count">4</div>
+                </div>
+                <div class="project-title">Cuban Domino Effect in Miami</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4" src="https://www.youtube.com/embed/wvpY_stVBVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="project-item-count">5</div>
+                </div>
+                <div class="project-title">Louis Rosemont</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4" src="https://player.vimeo.com/video/702446446?h=8c3700b2e0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;" title="Find Little Haiti"></iframe>
+                    </div>
+                  </div>
+                  <div class="project-item-count">6</div>
+                </div>
+                <div class="project-title">Find Little Haiti</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4"  src="https://www.youtube.com/embed/tT4-YImoG-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+                    </div>
+                  </div>
+                  <div class="project-item-count">7</div>
+                </div>
+                <div class="project-title">Four Reasons to Visit NYC</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe width="269.4" height="269.4" src="https://www.youtube.com/embed/KS841VeASVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                  <div class="project-item-count">8</div>
+                </div>
+                <div class="project-title">A Chinese Wheat Straw Artist</div>
+              </div>
+              <div class="project">
+                <div class="project-image">
+                  <div class="card">
+                    <div class="content-fill" style="overflow: hidden;">
+                      <iframe  width="269.4" height="269.4" src="https://www.youtube.com/embed/JjuXh6kUVcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
+                    </div>
+                  </div>
+                  <div class="project-item-count">9</div>
+                </div>
+                <div class="project-title">One Day in Asian Mart</div>
+              </div>
             </div>
-          </div>
         </div>
-      </div>
+      </section>
+      <!-- SKETCH SECTION-->
+      <section id="video" role="main">
+        <div id="projectThumbs">
+          <h2 class="category" style="padding-bottom: 0.8rem;">SKETCH</h2>
+          <p class="sketch" style="padding-bottom: 0.8rem;">Art Reproduction | Contact Me for Original Artists</p>
+            <div class="wrapper">
+                <!-- Below starts onclick zoom in effect-->
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-8.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">8</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-4.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">4</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-7.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">7</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-10.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">10</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-5.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">5</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>  
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-6.JPG" alt="" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">6</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-2.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">2</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-9.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">9</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-11.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">11</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>
+                <!--<div class="project">
+                  <div class="project-image">
+                    <div class="card">
+                      <div class="content-fill" style="overflow: hidden;">
+                        <img class="responsive" width="269.4" height="269.4" src="sketch-1.JPG" onclick="onClick(this)">
+                      </div>
+                    </div>
+                    <div class="project-item-count">1</div>
+                  </div>
+                  <div class="project-title"></div>
+                </div>-->
+                <!-- Modal for full size images on click-->
+                <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+                  <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+                  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                      <img id="img01" class="w3-image">
+                      <p id="caption"></p>
+                  </div>
+                </div>
+                <script>
+                    // Modal Image Gallery
+                    function onClick(element) {
+                    document.getElementById("img01").src = element.src;
+                    document.getElementById("modal01").style.display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                    }
+                </script>
+            </div>
+        </div>
+      </section>
+      <!--ENDING SECTION-->
+      <section id="ending" role="main">
+        <div id="projectThumbs" style="text-align:center; padding-top:4rem; padding-bottom:2rem;">
+          <p class="copyright"> © 2022 - Yi (Eve) Lu </p>
+          <!--<a href=""><span class="title" ><i class="fa-solid fa-cookie padding fa-1xs transparency"></i></span>-->
+      </section>
     </div>
-    <br>
-    <br>
+  </div>
+
+
+  <br>
+  <br>
+  <br>
     
-    <!--video stories below>-->
-    <div class="video">
-      <h2 class = "subhead">VISUAL STORYTELLING</h2>
-      <div class="columns-video-grid">   
-        <div class="card-video">
-          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/fxK_2Dpu0nA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <br>
-          <br>
-          <p class="subtitle"><a href="https://youtu.be/fxK_2Dpu0nA">Shanghai Lockdown 2022</a></p>
-          <p class="text"></p>  
-        </div>
-         <div class="card-video">
-            <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/NfCUjJpLhek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <br>
-            <br>
-            <p class="subtitle"><a href="https://youtu.be/NfCUjJpLhek">Food Desert in Overtown</a></p>
-            <p class="text"></p>
-        </div>
-        <div class="card-video">
-          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/YokNYODZe3c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <br>
-          <br>
-          <p class="subtitle"><a href="https://youtu.be/YokNYODZe3c">How Microchips Shortage Impacted Us?</a></p>
-          <p class="text"></p>
-        </div>
-        <div class="card-video">
-          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/Fd9q-lt4dck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
-          <br>
-          <br>
-          <p class="subtitle"><a href="https://youtu.be/Fd9q-lt4dck">Cuban Domino Effect in Miami</a></p>
-          <p class="text"></p>
-        </div>
-        <div class="card-video">
-          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/wvpY_stVBVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <br>
-          <br>
-          <p class="subtitle"><a href="https://youtu.be/wvpY_stVBVg">Louis Rosemont</a></p>
-          <p class="text"></p>    
-        </div>
-        <div class="card-video">
-          <div style="padding:56.25% 0 0 0;position:relative;">
-            <iframe width="375" height="210.9375" src="https://player.vimeo.com/video/702446446?h=8c3700b2e0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;" title="Find Little Haiti"></iframe>
-          </div><script src="https://player.vimeo.com/api/player.js"></script>
-          <br>
-          <p class="subtitle"><a href="https://vimeo.com/702446446?embedded=true&source=video_title&owner=173175491">Find Little Haiti</a></p>
-          <p class="text"></p>
-        </div>     
-        <div class="card-video">
-          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/tT4-YImoG-o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
-          <br>
-          <br>
-          <p class="subtitle"><a href="https://youtu.be/tT4-YImoG-o">Four Reasons to Visit NYC </a></p>
-          <p class="text"></p>
-        </div>
-        <div class="card-video">
-          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/KS841VeASVY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <br>
-          <br>
-          <p class="subtitle"><a href="https://youtu.be/KS841VeASVY">A Chinese Wheat Straw Artist</a></p>
-          <p class="text"></p>
-        </div>
-        <div class="card-video">
-          <iframe width="375" height="210.9375" src="https://www.youtube.com/embed/JjuXh6kUVcM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          
-          <br>
-          <br>
-          <p class="subtitle"><a href="https://youtu.be/tT4-YImoG-o">One Day in Asian Mart</a></p>
-          <p class="text"></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer bg">
-      <br>
-      <!--sometimes icon not showing up is because of subsription plan!-->
-      <div class="four-icon">
-        <a href=""><span class="title"><i class="fa-solid fa-cookie padding fa-1xs transparency"></i></span><a>
-      </div>
-    </div>
-
 </body>
 </html>
