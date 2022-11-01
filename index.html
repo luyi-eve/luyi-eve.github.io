@@ -10,8 +10,24 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Yeseva One">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
 
-    <!--This is for calibri font-->
-    <link rel="stylesheet" href="calibri-font.css">
+    <!-- import calibri font-->
+    <style>
+      @font-face {
+      font-family: 'Calibri';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://fonts.gstatic.com/l/font?kit=J7afnpV-BGlaFfdAhLEY67FIEjg&skey=a1029226f80653a8&v=v15) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    /* latin */
+    @font-face {
+      font-family: 'Calibri';
+      font-style: normal;
+      font-weight: 700;
+      src: url(https://fonts.gstatic.com/l/font?kit=J7aanpV-BGlaFfdAjAo9_pxqHxIZrCE&skey=cd2dd6afe6bf0eb2&v=v15) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    </style>
 
     <!--This is for icons button-->
     <script src="https://kit.fontawesome.com/a2143a8170.js" crossorigin="anonymous"></script>
@@ -49,7 +65,7 @@
     <style>
       h1.headline {
         font-family:"Cairo Play";
-        font-size: 4.5rem;
+        font-size: 4rem;
         font-weight:800;
         text-transform: none;
         color: #4a4a4a;
@@ -67,33 +83,40 @@
         color: #4a4a4a;
       }
 
+      p.myrole {
+        font-size: 17px; 
+        padding:0 1.5rem; 
+
+      }
+
       p.myname {
-        font-family:"calibri";
-        font-size: 22px;
-        font-weight: 400;
-        text-align: center;
-        color: #4a4a4a;
-        margin-bottom:0.8em;      
+        font-size: 17px; 
+        padding:0 2.5rem; 
+
       }
 
       p.myskill {
-        font-family:"calibri";
-        font-size: 18px;
-        font-weight:400;
-        margin-bottom: 3px;
+        font-size: 14px;
+        margin: 3px auto;
       }
-      
+
       p.mybackground {
-        font-family:"calibri";
-        font-size: 20px;
-        font-weight: 400;
+        font-size: 17px;
         text-align: justify;
         color: #4a4a4a;
-        margin: 0 0 0.8em;
+        margin: auto 1.5em;
+      }
+
+      p.mybackground#cartoonist {
+        font-size:17px;
+      }
+
+      #mytag span {
+        font-size:0.8rem !important;
       }
 
       p.sketch {
-        font-family:"calibri";
+        font-family:"Calibri";
         font-size: 17px;
         text-align: center;
         color: #4a4a4a;
@@ -106,30 +129,101 @@
         font-style: italic;
       }
 
-    </style>
+      @media only screen and (min-width: 40em){
+          h1.headline {
+          font-family:"Cairo Play";
+          font-size: 4.5rem;
+          font-weight:800;
+          text-transform: none;
+          color: #4a4a4a;
+          line-height: 1.2em;
+        }
 
-    <!--background-->
-    <style>
-      .bg {
-          background-color: rgb(255, 255, 255);
-      }
-    </style>
+        p.myrole {
+          font-size: 22px; 
+          padding:0 2.5rem; 
 
-    <!--sections-->
+        }
+
+        p.myname {
+          font-family:"Calibri";
+          font-size: 22px;
+          font-weight: 400;
+          text-align: center;
+          color: #4a4a4a;
+          margin-bottom:0.8em;      
+        }
+
+        p.myskill {
+          font-family:"Calibri";
+          font-size: 18px;
+          font-weight:400;
+          margin: 15px 10px;
+        }
+
+        p.mybackground {
+          font-family:"Calibri";
+          font-size: 20px;
+          font-weight: 400;
+          text-align: justify;
+          color: #4a4a4a;
+          margin: 0 0 0.8em;
+        }
+
+        p.mybackground#cartoonist {
+          font-size:18px;
+        }
+
+        #mytag span {
+          font-size:0.9rem !important;
+        } 
+    }
+
+    </style>
+ 
+    <!--section-->
     <style>
+      /* introduction */
       #introduction {
           margin:auto;
           max-width: 700px;
           text-align: center;
       }
 
+      #mytag {  
+        margin: auto 0.2em -2em 0.2em;
+      }
+
       #pop-up {
         border: 0.8px;
         border-style: dotted;
         border-color: #0d0d0d;
-        padding: 0.8em;
+        margin: auto 1.5em;
       }
 
+      /* canvas: data/print/video/sketch */
+      section#data, section#print, section#video, section#sketch {
+        margin: auto 1rem auto 2rem;
+
+      }
+
+      /* resize every section for desktop versions */
+      @media only screen and (min-width: 40em){
+          #pop-up {
+          border: 0.8px;
+          border-style: dotted;
+          border-color: #0d0d0d;
+          margin: 0 auto;
+        }
+          #mytag {
+          margin-bottom: -1em;
+        }
+        
+          section#data, section#print, section#video, section#sketch {
+            margin:auto auto;
+        }
+    }
+      
     </style>
 
     <!-- img & icon & line-->
@@ -160,7 +254,7 @@
         }
       }
     
-      #data #print #video #ending {
+      #data #print #video #sketch #ending {
         padding: 30px 0;
         opacity: 1;
         position: relative;
@@ -251,13 +345,15 @@
     </style>
   </head>
 
-<body class="bg">
+<body>
   <div id="introduction">
     <h1 class="headline">Yi (Eve) Lu</h1>
-    <p class="myname">Filmmaker | <strong>Data Journalist </strong> | She/her/hers</p>
-    <span class="tag is-info is-light" style="font-size: 0.9rem;">#gender disparities</span> 
-    <span class="tag is-info is-light" style="font-size: 0.9rem;">#climate change</span>
-    <span class="tag is-info is-light" style="font-size: 0.9rem;">#multiculturalism</span>
+    <p class="myrole">Filmmaker | <strong>Data </strong> Journalist | <strong>Graphic</strong> Designer</p>
+    <div id="mytag">
+      <span class="tag is-info is-light" style="font-size: 0.9rem;">#gender disparities</span> 
+      <span class="tag is-info is-light" style="font-size: 0.9rem;">#climate change</span>
+      <span class="tag is-info is-light" style="font-size: 0.9rem;">#multiculturalism</span>
+    </div>
     <br>
     <br>
     <p class="myname">
@@ -265,7 +361,7 @@
     </p>
     <div id="pop-up">
       <p class="myskill" style="color:#3f4b9c">
-        - Things I do: Python (Pandas, BeautifulSoup, Selenium), HTML/CSS, JavaScript/D3.js, Adobe Illustrator, Mapbox, QGIS, Datawrapper/Flourish, etc.
+        - Tools I use: Python (Pandas, BeautifulSoup, Selenium), HTML/CSS, JavaScript/D3.js, Adobe Illustrator, Mapbox, QGIS, Datawrapper/Flourish, etc.
       </p>
     </div>
     <br>
@@ -281,7 +377,7 @@
       - I grew up in the Chinese city of Shanghai and speak <span style="background-color:#FEE4A6">English and Mandarin</span>. In 2020, I graduated from <span style="background-color:#F9C4AA">Shanghai University</span> with a bachelor's degree in Journalism.
     </p>
     <br>
-    <p class="mybackground" style="font-size:18px;">
+    <p class="mybackground" id="cartoonist">
       <i>I'm also an amateur cartoonist🎨 with years of practice in sketching who only draws on diary books. Scroll down to the bottom if you'd like to check my sketch art reproduction:)</i>
     </p>        
     <br>
@@ -397,6 +493,7 @@
               </div>
           </div>
       </section>
+
       <!-- REPORTING SECTION-->
       <section id="print" role="main">
         <div id="projectThumbs">
@@ -483,6 +580,7 @@
             </div>
         </div>
       </section>
+
       <!-- VIDEO SECTION-->
       <section id="video" role="main">
         <div id="projectThumbs">
@@ -590,11 +688,12 @@
             </div>
         </div>
       </section>
+
       <!-- SKETCH SECTION-->
-      <section id="video" role="main">
+      <section id="sketch" role="main">
         <div id="projectThumbs">
-          <h2 class="category" style="padding-bottom: 0.8rem;">SKETCH</h2>
-          <p class="sketch" style="padding-bottom: 0.8rem;">Art Reproduction | Contact Me for Original Artists</p>
+          <h2 class="category" style="padding-bottom: 0.8rem;">ART REPRODUCTION</h2>
+          <p class="sketch" style="padding-bottom: 0.8rem;">Sketch | Contact Me for Original Artists</p>
             <div class="wrapper">
                 <!-- Below starts onclick zoom in effect-->
                 <div class="project">
@@ -727,13 +826,14 @@
             </div>
         </div>
       </section>
+
       <!--ENDING SECTION-->
       <section id="ending" role="main">
         <div id="projectThumbs" style="text-align:center; padding-top:4rem; padding-bottom:2rem;">
           <p class="copyright"> © 2022 - Yi (Eve) Lu </p>
           <!--<a href=""><span class="title" ><i class="fa-solid fa-cookie padding fa-1xs transparency"></i></span>-->
       </section>
-    </div>
+  </div>
   </div>
 
 
