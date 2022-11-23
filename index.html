@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Eve Lu</title>
+    <title>Yi (Eve) Lu</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo Play">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inspiration">
@@ -242,23 +242,31 @@
   
     <!--housekeeping-->
     <style>
+      *, ::after, ::before {
+        box-sizing: unset;
+      }
+
       #canvas {
         max-width: 900px;
         margin: 10px auto;
         padding: 0;
       }
 
-      *, ::after, ::before {
-        box-sizing: unset;
+      /* resize #canvas for ipad version */
+      @media only screen and (max-width: 920px) {
+          #canvas {
+            margin: 0 auto;
+            padding: 40px;
+        }
       }
-
-      @media only screen and (max-width: 390px) {
+      /* resize #canvas for mobile version */
+      @media only screen and (max-width: 40em) {
           #canvas {
           margin: 0 auto;
           padding: 20px;
         }
       }
-    
+
       #data #print #video #sketch #ending {
         padding: 30px 0;
         opacity: 1;
@@ -268,6 +276,7 @@
       article, footer, header, section {
         display: block;
       }
+
 
       #projectThumbs .wrapper {
       width: 105.1%;
@@ -340,11 +349,28 @@
     #projectThumbs .project .project-title {
         font-family: "calibri";
         font-weight: 400;
-        line-height: 1em;
+        line-height: 1.5em;
         font-size: 16px;
         text-align: center;
         letter-spacing: 0em;
         color: #737373;
+    }
+
+    .project-title span {
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      background-color: #faf5ed;
+      color: #342a4e;
+    }
+    
+
+    /* adjust project title for mobile size (screen size <= 500px ) */
+    @media only screen and (max-width: 500px) {
+        #projectThumbs .project .project-title {
+          padding-bottom: 1em;
+      }
     }
 
     </style>
@@ -403,19 +429,19 @@
           <div id="projectThumbs">
             <h2 class="category" style="padding-top: 2rem;">DATA VISUALIZATION</h2>
               <div class="wrapper">
-                  <!--<a class="project" href="">
+                  <a class="project" href="https://luyi-eve.github.io/fl-abortion-costs/">
                     <div>
                       <div class="project-image">
                         <div class="card">
                           <div class="content-fill" style="overflow: hidden;">
-                            <img src=".png" alt="coming soon">
+                            <img src="fl-abortion-costs.gif" alt="coming soon">
                           </div>
                         </div>
                         <div class="project-item-count">0</div>
                       </div>
-                      <div class="project-title">Capstone Project</div>
+                      <div class="project-title">How Much It Takes To Get An Abortion In The 'PURPLE' State Of Florida?</div>
                     </div>
-                  </a>-->
+                  </a>
                   <a class="project" href="https://luyi-eve.github.io/words-by-maugham/">
                       <div>
                         <div class="project-image">
@@ -426,7 +452,7 @@
                           </div>
                           <div class="project-item-count">1</div>
                         </div>
-                        <div class="project-title" >Words by Maugham</div>
+                        <div class="project-title">Words by Maugham</div>
                       </div>
                   </a>
                   <a class="project" href="https://luyi-eve.github.io/chicago-dead-zones/">
@@ -468,19 +494,6 @@
                       <div class="project-title">Cool it ?! New Yorkers</div>
                     </div>
                   </a>
-                  <a class="project" href="https://luyi-eve.github.io/project-one">
-                    <div>
-                      <div class="project-image">
-                        <div class="card">
-                          <div class="content-fill" style="overflow: hidden;">
-                            <img class="responsive" src="asian-hate.png" alt="coming soon">
-                          </div>
-                        </div>
-                        <div class="project-item-count">5</div>
-                      </div>
-                      <div class="project-title">Who Is Being Hunted Where?</div>
-                    </div>
-                  </a>
                   <a class="project" href="https://luyi-eve.github.io/the-biggest-weapon/">
                     <div>
                       <div class="project-image">
@@ -489,11 +502,25 @@
                             <img class="responsive" src="the-biggest-weapon4.png" alt="coming soon">
                           </div>
                         </div>
-                        <div class="project-item-count">6</div>
+                        <div class="project-item-count">5</div>
                       </div>
                       <div class="project-title">The Biggest Weapon</div>
                     </div>
                   </a>
+                  <a class="project" href="https://luyi-eve.github.io/project-one">
+                    <div>
+                      <div class="project-image">
+                        <div class="card">
+                          <div class="content-fill" style="overflow: hidden;">
+                            <img class="responsive" src="asian-hate.png" alt="coming soon">
+                          </div>
+                        </div>
+                        <div class="project-item-count">6</div>
+                      </div>
+                      <div class="project-title">Who Is Being Hunted Where?</div>
+                    </div>
+                  </a>
+                  
                   
               </div>
           </div>
