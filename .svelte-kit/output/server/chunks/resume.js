@@ -5361,7 +5361,7 @@ let DATA = {
       dates: "April 2022",
       publisher: "University of Miami",
       active: true,
-      description: "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+      description: "",
       technologies: [
         "Datawrapper",
         "Adobe Illustrator"
