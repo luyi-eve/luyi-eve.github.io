@@ -1,0 +1,13 @@
+{
+	"/": [],
+	"/api/content": [
+		"src/routes/api/content/+server.ts"
+	],
+	"/blog": [
+		"src/routes/blog/+page.server.ts"
+	],
+	"/blog/[slug]": [
+		"src/routes/blog/[slug]/+page.ts",
+		"src/routes/blog/[slug]/+page.server.js"
+	]
+}
