@@ -1,7 +1,8 @@
 .DS_Store
 index-draft.html
-original/
+draft/
 capstone-cover-video/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
