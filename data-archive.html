@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eve Lu</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Tab icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<style>
+    .hover-underline:hover {
+        text-underline-offset: 6px; /* Adjust space between the text and underline */
+        text-decoration: underline;
+        text-decoration-color: #adc4fe; /* Example color */
+        text-decoration-thickness: 2px; /* Adjust thickness */
+    }
+</style>
+
+<body class="bg-white text-gray-800 font-sans">
+    <div class="relative mx-auto min-h-screen max-w-3xl bg-background px-6 py-12 font-sans antialiased sm:py-24">
+        <section id="data-story" class="bg-white py-8">
+            <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-normal text-[14px] text-center mb-2 px-3 py-1">
+                    <span class="bg-[#113524] text-white px-2 py-1">DATA STORY ARCHIVE
+                    </span>
+                </h2>
+                <p class="text-center pt-4 mb-12 subtitle text-3xl font-bold tracking-tighter sm:text-4xl" style="font-family:Cairo Play; color:rgba(0, 0, 0, 0.73)">
+                    My Previous Work
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Story Item -->
+                    <div class="relative group">
+                        <div id="dataviz-img" class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative">
+                            <img src="/image/words-by-maugham.png" alt="Story Image One" class="object-cover w-full h-full">
+                            <!-- Overlay Effect -->
+                            <a href="https://luyi-eve.github.io/words-by-maugham/">
+                                <div id="overlay-effect" class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                                    <p id="description" class="text-center px-4 text-[14px]">
+                                        A text analysis story that sorts through Somerset Maugham's 25 books, short stories and plays.
+                                    </p>
+                                    <div id="tool-tag" class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Text Analysis</span>
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Python</span>
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Flourish</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="dataviz-text" class="pt-4">
+                            <h3 id="headline" class="text-[16px] font-semibold text-center">Words by Maugham</h3>
+                            <p id="date-and-publisher" class="text-[12px] text-gray-600 text-center my-2">August 2022 • 
+                                <span style="background-color: #d9f9f4; padding: 2px 4px;"> Lede Program ･ Columbia University</span>
+                            </p>
+                        </div>
+                    </div>
+
+                     <!-- Story Item -->
+                     <div class="relative group">
+                        <div id="dataviz-img" class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative">
+                            <img src="/image/chicago-dead-zones.png" alt="" class="object-cover w-full h-full">
+                            <!-- Overlay Effect -->
+                            <a href="https://luyi-eve.github.io/chicago-dead-zones/">
+                                <div id="overlay-effect" class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                                    <p id="description" class="text-center px-4 text-[14px]">
+                                        A personal investigation of Chicago's cell service through a mix of maps.',
+                                    </p>
+                                    <div id="tool-tag" class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">QGIS</span>
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Mapbox</span>
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Scrollama.js</span>
+
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="dataviz-text" class="pt-4">
+                            <h3 id="headline" class="text-[16px] font-semibold text-center">Chicago's Dead Zones</h3>
+                            <p id="date-and-publisher" class="text-[12px] text-gray-600 text-center my-2">August 2022 • 
+                                <span style="background-color: #d9f9f4; padding: 2px 4px;"> Lede Program ･ Columbia University</span>
+                            </p>                        
+                        </div>
+                    </div>
+
+                     <!-- Story Item -->
+                     <div class="relative group">
+                        <div id="dataviz-img" class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative">
+                            <img src="/image/cool-it-nyc.png" alt="" class="object-cover w-full h-full">
+                            <!-- Overlay Effect -->
+                            <a href="https://luyi-eve.github.io/cool-it-newyorkers/">
+                                <div id="overlay-effect" class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                                    <p id="description" class="text-center px-4 text-[14px]">
+                                        A guide towards New York City's public cooling features during extreme heat emergencies.
+                                    </p>
+                                    <div id="tool-tag" class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Python</span>
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Javascript</span>
+                                        <span class="px-2 py-1 bg-white text-black rounded" style="display: inline-block; white-space: nowrap; padding: 2px 6px; background-color: white; color: black; font-size: 10px; border-radius: 3px;">Adobe Illustrator</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div id="dataviz-text" class="pt-4">
+                            <h3 id="headline" class="text-[16px] font-semibold text-center">Cool it?! New Yorkers</h3>
+                            <p id="date-and-publisher" class="text-[12px] text-gray-600 text-center my-2">July 2022 • 
+                                <span style="background-color: #d9f9f4; padding: 2px 4px;"> Lede Program ･ Columbia University</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <!-- Direct to next archive page -->
+            <div class="py-20 flex flex-col space-y-4 text-center">
+                <p class="text-gray-500 text-[12px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[20px] leading-relaxed">
+                    <span class="font-semibold cursor-pointer hover-underline" style="font-family:Cairo Play, serif">
+                        <a href="">← Eve (Yi) Lu</a>
+                    </span>
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
