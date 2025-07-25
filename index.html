@@ -137,12 +137,14 @@
                 <div id="about" class="mt-6" style="line-height: 1.6;">
                     <h2 class="text-xl font-bold" style="line-height: 1.6;">About</h2>
                     <p class="mt-2 text-[14px] sm:text-[16px] text-gray-600" style="line-height: 1.6;">
-                        I am a recent graduate of <strong>Stanford University</strong> in Data Journalism, and a data reporter intern for <strong>Tampa Bay Times</strong> in the summer of 2024. Prior to Stanford, I hold a M.A. degree in Journalism at the <strong>University of Miami</strong> and an alumna of the <strong>Lede Program</strong> in 2022. I care about <strong>social gender inequalities</strong> and <strong>global environmental matters</strong>. Born and raised in Shanghai, I speak English and Mandarin. While not coding, I watch thriller movies alone 🍿 and collect Hello Kittys 🎀₍^. .^₎⟆.
+                        Currently, I serve as the graphic fellow for <strong>Scientific American</strong>, creating delightful visuals and writing about fun science. I am also a recent graduate of <strong>Stanford University</strong> in Data Journalism, and a data reporter intern for <strong>Tampa Bay Times</strong> in the summer of 2024. Prior to Stanford, I hold a M.A. degree in Journalism at the <strong>University of Miami</strong> and an alumna of the <strong>Lede Program</strong> in 2022. I care about <strong>social gender inequalities</strong> and <strong>global environmental matters</strong>. Born and raised in Shanghai, I speak English and Mandarin. While not coding, I watch thriller movies alone 🍿 and collect Hello Kittys 🎀₍^. .^₎⟆.
                     </p>
                 </div>
                 <div id="tools" class="mt-6 mb-10">
                     <h2 class="text-xl font-bold" style="line-height: 1.6;">Tools I use</h2>
-                    <p class="mt-2 text-[14px] text-gray-700" style="line-height: 1.6;">████▒▒▒▒▒▒▒▒▒ ?%: I've been self-teaching  <span class="font-extrabold text-[12px] mr-2 mb-2 inline-flex items-center px-3 py-1 rounded-full text-black" style="background-color: #d9f9f4;"> Svelte</span>bit by bit lately.</p>
+                    
+                    <!--<p class="mt-2 text-[14px] text-gray-700" style="line-height: 1.6;">████▒▒▒▒▒▒▒▒▒ ?%: I've been self-teaching  <span class="font-extrabold text-[12px] mr-2 mb-2 inline-flex items-center px-3 py-1 rounded-full text-black" style="background-color: #d9f9f4;"> Svelte</span>bit by bit lately.</p>-->
+
                     <div class="flex flex-wrap items-center mt-4 text-sm font-medium">
                         <span class="text-[12px] mr-2 mb-2 inline-flex items-center px-4 py-1 rounded-full text-black" style="background-color: #d9f9f4;">Python</span>
                         <span class="text-[12px] mr-2 mb-2 inline-flex items-center px-3 py-1 rounded-full text-black" style="background-color: #d9f9f4;">Adobe Illustrator</span>
@@ -183,6 +185,144 @@
                     I make graphics
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    
+<!-- THIS IS A BREAKLINE FOR ALL SCIAM GRAPHICS WORK -->
+
+        <!-- 🔁 Graphic Item 1 -->
+        <div class="relative group">
+            <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
+                onclick="openModalById('imageModal1')">
+            <img src="/image/where-bird-flu-2.png" alt="Story Image" class="object-cover w-full h-full">
+            <a href="#">
+                <div class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                <p class="text-center px-4 text-[14px]">
+                    A graphic for Scientific American showing a seasonal pattern that bird flu cases tend to decline during the summer months based on USDA data from 2022 to 2025.
+                </p>
+                <div class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                    <span class="px-2 py-1 bg-white text-black rounded text-[10px]">Adobe Illustrator</span>
+                </div>
+                </div>
+            </a>
+            </div>
+            <div class="pt-4 text-center">
+            <h3 class="text-[16px] font-semibold">Where Did Bird Flu Go?</h3>
+            <p class="text-[12px] text-gray-600 my-2">
+                July 2025 • <span class="bg-[#d9f9f4] px-1">Scientific American</span>
+            </p>
+            </div>
+        </div>
+        
+        <!-- 🔁 Graphic Item 1 Modal -->
+        <div id="imageModal1" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
+        opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
+            flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent1">
+            <!-- Left -->
+            <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
+            <img src="/image/where-bird-flu-goes_graphic.png" class="max-h-[90vh] object-contain" onclick="event.stopPropagation()" />
+            </div>
+            <!-- Right -->
+            <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
+                <p id="modalText" class="text-sm text-gray-700 leading-relaxed pb-4">
+                    For a Scientific American story 
+                    <a href="https://www.scientificamerican.com/article/bird-flu-is-out-of-the-news-but-still-circulating/" 
+                    class="underline underline-offset-6"
+                    style="text-decoration-color: #adc4fe; text-decoration-thickness: 1px;">Where Did Bird Flu Go?</a>
+                    by Meghan Bartels, I created a graphic showing how cases of highly pathogenic avian influenza in poultry tend to decline during the summer months, based on USDA data from 2022 to 2025.
+                </p>
+                <p id="modalText" class="text-sm text-gray-700 leading-relaxed">
+                    Experts suggest two main reasons for this seasonal drop: the virus doesn't thrive in warmer temperatures, and during the breeding season, migratory birds are less active near poultry farms, potentially slowing transmission.
+                </p>
+            </div>
+        </div>
+        </div>
+        
+        <!-- 🔁 Graphic Item 2 -->
+        <div class="relative group">
+        <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
+                onclick="openModalById('imageModal2')">
+            <img src="/image/word-choice-by-language-models.png" alt="Story Image" class="object-cover w-full h-full">
+            <a href="#">
+            <div class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                <p class="text-center px-4 text-[14px]">
+                    A graphic for Scientific American exploring how ChatGPT and Gemini differ in their word choice preferences. 
+                </p>                
+                <div class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                <span class="px-2 py-1 bg-white text-black rounded text-[10px]">Adobe Illustrator</span>
+                </div>
+            </div>
+            </a>
+        </div>
+        <div class="pt-4 text-center">
+            <h3 class="text-[16px] font-semibold">AI Chatbots Write in Different Idioms</h3>
+            <p class="text-[12px] text-gray-600 my-2">
+            June 2025 • <span class="bg-[#d9f9f4] px-1">Scientific American</span>
+            </p>
+        </div>
+        </div>
+        
+        <!-- 🔁 Graphic Item 2 Modal -->
+        <div id="imageModal2" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
+        opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
+            flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent2">
+            <!-- Left -->
+            <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
+            <img src="/image/word-choice-by-language-models_graphic.png" class="max-h-[90vh] object-contain" onclick="event.stopPropagation()" />
+            </div>
+            <!-- Right -->
+            <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
+            <p class="text-sm text-gray-700 leading-relaxed pb-4">
+                For a Scientific American story 
+                <a href="https://www.scientificamerican.com/article/chatgpt-and-gemini-ai-have-uniquely-different-writing-styles/" 
+                    class="underline underline-offset-6"
+                    style="text-decoration-color: #adc4fe; text-decoration-thickness: 1px;">
+                Each AI Chatbot Has Its Own Distinctive Writing Style
+                </a>
+                by Karolina Rudnicka, I made a graphic that explores how ChatGPT and Gemini differ in their word choice preferences.                
+            </p>
+            <p id="modalText" class="text-sm text-gray-700 leading-relaxed">
+                For instance, “idiolect,” a narrower concept than “dialect,” refers to an individual’s unique speaking style. The author analyzed 20 of the most frequent short texts on diabetes generated by both models and found they have distinct writing styles. Gemini favors simple, direct language like “high blood sugar,” while ChatGPT tends to lean toward more formal word combination such as “blood glucose levels.” 
+            </p>
+            </div>
+        </div>
+        </div>
+        
+        <!-- ✅ Modal Logic -->
+        <script>
+        function openModalById(modalId) {
+            const modal = document.getElementById(modalId);
+            const content = modal.querySelector('[id^="modalContent"]');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+            content.classList.remove('scale-90', 'opacity-0');
+            content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeModalById(modalId, contentId) {
+            const modal = document.getElementById(modalId);
+            const content = document.getElementById(contentId);
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-90', 'opacity-0');
+            setTimeout(() => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            }, 300);
+        }
+
+        // Optional: allow clicking on background to close
+        document.querySelectorAll('[id^="imageModal"]').forEach(modal => {
+            modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                const contentId = modal.querySelector('[id^="modalContent"]').id;
+                closeModalById(modal.id, contentId);
+            }
+            });
+        });
+        </script>
+                    
+<!-- THIS IS A BREAKLINE FOR ALL SCIAM GRAPHICS WORK -->
 
                     <!-- Story Item -->
                     <div class="relative group">
