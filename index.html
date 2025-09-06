@@ -119,6 +119,38 @@
         .dot.active {
             background-color: black;
         }
+
+        
+        /* Mobile typography scaling */
+        @media (max-width: 640px) {
+            #imageModal0 p,
+            #imageModal1 p,
+            #imageModal2 p,
+            #imageModal3 p,
+            #imageModal4 p {
+            font-size: 0.8rem;     /* smaller text (~12.8px) */
+            }
+
+            #imageModal0 h3,
+            #imageModal1 h3,
+            #imageModal2 h3,
+            #imageModal3 h3,
+            #imageModal4 h3 {
+            font-size: 1rem;       /* reduce modal titles */
+            }
+
+            /* Optional: shrink button icons too */
+            #imageModal0 button,
+            #imageModal1 button,
+            #imageModal2 button,
+            #imageModal3 button,
+            #imageModal4 button {
+            width: 1.75rem;
+            height: 1.75rem;
+            font-size: 0.9rem;
+            }
+        }
+
                 
     </style>
 
@@ -187,7 +219,98 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
                     
-<!-- THIS IS A BREAKLINE FOR ALL SCIAM GRAPHICS WORK -->
+<!-- THIS IS A BREAKLINE FOR ALL GRAPHICS GALLERY -->
+        <!-- 🔁 Graphic Item 4 -->
+        <div class="relative group">
+            <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
+                onclick="openModalById('imageModal4')">
+            <img src="/image/social-disparities-extreme-heat-days.png" alt="Story Image" class="object-cover w-full h-full">
+            <a href="#">
+                <div class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                <p class="text-center px-4 text-[14px]">
+                    A graphic for Scientific American illustrating the relative risk of heat-wave exposure among children from marginalized communities in U.S. public schools, compared with white students.
+                </p>
+                <div class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                    <span class="px-2 py-1 bg-white text-black rounded text-[10px]">Adobe Illustrator</span>
+                </div>
+                </div>
+            </a>
+            </div>
+            <div class="pt-4 text-center">
+            <h3 class="text-[16px] font-semibold">Who Attends the Hottest School?</h3>
+            <p class="text-[12px] text-gray-600 my-2">
+                September 2025 • <span class="bg-[#d9f9f4] px-1">Scientific American</span>
+            </p>
+            </div>
+        </div>
+        
+        <!-- 🔁 Graphic Item 4 Modal -->
+        <div id="imageModal4" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
+                opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
+                    flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent4">
+            <!-- Left (Carousel) -->
+            <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
+            <div class="relative w-full carousel" data-index="0">
+                <!-- Viewport -->
+                <div class="overflow-hidden rounded-lg">
+                <!-- Track -->
+                <div class="flex transition-transform duration-300 ease-out carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full flex items-center justify-center h-[60svh] md:h-auto">
+                        <img src="/image/social-disparities-extreme-heat-days_graphic_desktop.png"
+                        class="max-h-[90vh] object-contain"
+                        onclick="event.stopPropagation()" />
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full flex items-center justify-center h-[60svh] md:h-auto">
+                        <img src="/image/social-disparities-extreme-heat-days_graphic_mobile.png"
+                        class="max-h-[90vh] object-contain"
+                        onclick="event.stopPropagation()" />
+                    </div>                    
+                </div>
+                </div>
+                <!-- <div class="flex items-center justify-center gap-2 mt-3 mb-6 carousel-dots"></div> -->
+            </div>
+            </div>
+
+            <!-- Right -->  
+            <!-- Arrows Row -->
+            <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
+                <div class="flex justify-start gap-2 mb-4">
+                    <button type="button"
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-prev"
+                            aria-label="Previous slide">
+                    &#10094;
+                    </button>
+
+                    <button type="button"
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-next"
+                            aria-label="Next slide">
+                    &#10095;
+                    </button>
+                </div>
+
+                <p class="text-sm text-gray-700 leading-relaxed pb-4 pt-2">
+                    For a Scientific American story 
+                    <a href="https://www.scientificamerican.com/article/more-teens-are-getting-vaccines/" 
+                        class="underline underline-offset-6"
+                        style="text-decoration-color: #adc4fe; text-decoration-thickness: 1px;">
+                   Kids from Marginalized Communities Are Learning in the Hottest Classrooms
+                    </a>
+                    by Humberto Basilio, I made a graphic sourcing the data from a recent study that looks into the social disparities spotted in the annual frequency of extreme heat days across the top 20% of U.S. public schools. 
+                </p>
+                <p id="modalText" class="text-sm text-gray-700 leading-relaxed pb-4">
+                    The chart shows, compared to white students, Hispanic/Latino, Native American/Alaska Native and Hawaiian/other Pacific Islander students are at a higher relative risk than white students of attending the top 20 percent of U.S. schools that experience the highest annual frequency of days with extreme heat, based on the relative threshold of temperatures that are in the highest 5 percent of what was historically typical for their location.
+                </p>
+                <p id="modalText" class="text-sm text-gray-700 leading-relaxed pb-4">
+                    (Click the arrows to see both desktop and mobile versions)
+                </p>
+
+            </div>
+        </div>
+        </div>
+
         <!-- 🔁 Graphic Item 3 -->
         <div class="relative group">
             <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
@@ -216,14 +339,14 @@
         <div id="imageModal3" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
                 opacity-0 pointer-events-none transition-opacity duration-300 px-4">
         <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
-                    flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent2">
+                    flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent3">
             <!-- Left (Carousel) -->
             <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
-            <div class="relative w-full">
+            <div class="relative w-full carousel" data-index="0">
                 <!-- Viewport -->
                 <div class="overflow-hidden rounded-lg">
                 <!-- Track -->
-                <div id="slides2" class="flex transition-transform duration-300 ease-out">
+                <div class="flex transition-transform duration-300 ease-out carousel-track">
                     <!-- Slide 1 -->
                     <div class="min-w-full flex items-center justify-center">
                         <img src="/image/more-teens-getting-vaccines-graphic1.png"
@@ -238,6 +361,7 @@
                     </div>                    
                 </div>
                 </div>
+                <!-- <div class="flex items-center justify-center gap-2 mt-3 mb-6 carousel-dots"></div> -->
             </div>
             </div>
 
@@ -246,16 +370,14 @@
             <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
                 <div class="flex justify-start gap-2 mb-4">
                     <button type="button"
-                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow"
-                            aria-label="Previous slide"
-                            onclick="carouselPrev('slides2','dots2')">
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-prev"
+                            aria-label="Previous slide">
                     &#10094;
                     </button>
 
                     <button type="button"
-                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow"
-                            aria-label="Next slide"
-                            onclick="carouselNext('slides2','dots2')">
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-next"
+                            aria-label="Next slide">
                     &#10095;
                     </button>
                 </div>
@@ -279,7 +401,6 @@
         </div>
         </div>
   
-
         <!-- 🔁 Graphic Item 2 -->
         <div class="relative group">
             <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
@@ -308,10 +429,19 @@
         <div id="imageModal2" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
         opacity-0 pointer-events-none transition-opacity duration-300 px-4">
         <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
-            flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent1">
+            flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent2">
             <!-- Left -->
             <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
-            <img src="/image/where-bird-flu-goes_graphic.png" class="max-h-[90vh] object-contain" onclick="event.stopPropagation()" />
+              <div class="relative w-full carousel" data-index="0">
+                <div class="overflow-hidden rounded-lg">
+                  <div class="flex transition-transform duration-300 ease-out carousel-track">
+                    <div class="min-w-full flex items-center justify-center">
+                      <img src="/image/where-bird-flu-goes_graphic.png" class="max-h-[90vh] object-contain" onclick="event.stopPropagation()" />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="flex items-center justify-center gap-2 mt-3 mb-6 carousel-dots"></div> -->
+              </div>
             </div>
             <!-- Right -->
             <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
@@ -357,10 +487,19 @@
         <div id="imageModal1" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
         opacity-0 pointer-events-none transition-opacity duration-300 px-4">
         <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
-            flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent2">
+            flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent1">
             <!-- Left -->
             <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
-            <img src="/image/word-choice-by-language-models_graphic.png" class="max-h-[90vh] object-contain" onclick="event.stopPropagation()" />
+              <div class="relative w-full carousel" data-index="0">
+                <div class="overflow-hidden rounded-lg">
+                  <div class="flex transition-transform duration-300 ease-out carousel-track">
+                    <div class="min-w-full flex items-center justify-center">
+                      <img src="/image/word-choice-by-language-models_graphic.png" class="max-h-[90vh] object-contain" onclick="event.stopPropagation()" />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="flex items-center justify-center gap-2 mt-3 mb-6 carousel-dots"></div> -->
+              </div>
             </div>
             <!-- Right -->
             <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
@@ -379,35 +518,116 @@
             </div>
         </div>
         </div>
+
+        <!-- 🔁 Graphic Item 0 -->
+        <div class="relative group">
+            <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
+                onclick="openModalById('imageModal0')">
+            <img src="/image/blender-qgis-render.gif" alt="Story Image" class="object-cover w-full h-full"> 
+            <a href="#">
+                <div class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                <p class="text-center px-4 text-[14px]">
+                    A 3D visualization of Galápagos Islands that connects Blender with QGIS to render real geographic data as 3D models.
+                </p>
+                <div class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                    <span class="px-2 py-1 bg-white text-black rounded text-[10px]">Blender</span>
+                    <span class="px-2 py-1 bg-white text-black rounded text-[10px]">QGIS</span>
+                </div>
+                </div>
+            </a>
+            </div>
+            <div class="pt-4 text-center">
+            <h3 class="text-[16px] font-semibold">3D Geospatial Modeling</h3>
+            <p class="text-[12px] text-gray-600 my-2">
+                August 2025 • <span class="bg-[#d9f9f4] px-1">Personal</span>
+            </p>
+            </div>
+        </div>
         
+        <!-- 🔁 Graphic Item 0 Modal -->
+        <div id="imageModal0" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
+                opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+        <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
+                    flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent0">
+            <!-- Left (Carousel) -->
+            <div class="mt-3 mb-3 w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
+            <div class="relative w-full carousel" data-index="0">
+                <!-- Viewport -->
+                <div class="overflow-hidden rounded-lg">
+                <!-- Track -->
+                <div class="flex transition-transform duration-300 ease-out carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="min-w-full flex items-center justify-center">
+                        <img src="/image/blender-qgis-render.png"
+                        class="max-h-[90vh] object-contain"
+                        onclick="event.stopPropagation()" />
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full flex items-center justify-center">
+                        <img src="/image/blender-qgis-render_graphic.gif"
+                        class="max-h-[90vh] object-contain"
+                        onclick="event.stopPropagation()" />
+
+                    </div>                    
+                </div>
+                </div>
+                <!-- <div class="flex items-center justify-center gap-2 mt-3 mb-6 carousel-dots"></div> -->
+            </div>
+            </div>
+
+            <!-- Right -->  
+            <!-- Arrows Row -->
+            <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
+                <div class="flex justify-start gap-2 mb-4">
+                    <button type="button"
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-prev"
+                            aria-label="Previous slide">
+                    &#10094;
+                    </button>
+
+                    <button type="button"
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-next"
+                            aria-label="Next slide">
+                    &#10095;
+                    </button>
+                </div>
+
+                <p class="text-sm text-gray-700 leading-relaxed pb-4 pt-2">
+                    This visualization was my first attempt using Blender in combination with QGIS to render real geographic data as 3D models. I used the Galápagos Islands in Ecuador as a case study. It is also part of the Blender 3D Geospatial Modeling training by Elizabeth Rosenbloom at <a href="https://schoolofinfodesign.com//" 
+                    class="underline underline-offset-6"
+                    style="text-decoration-color: #adc4fe; text-decoration-thickness: 1px;">The School of Information Design</a>
+                </p>
+            </div>
+        </div>
+        </div>
+
         <!-- ✅ Modal Logic -->
         <script>
         /* =========================
-            Modal + Carousel (Combined)
+            Modal + Carousel (Instance-based)
             ========================= */
         
-        /* ===== Modal Logic (yours, with a small hook) ===== */
+        /* ===== Modal Logic (unchanged copy, but ID-safe) ===== */
         function openModalById(modalId) {
             const modal = document.getElementById(modalId);
-            const content = modal.querySelector('[id^="modalContent"]');
+            const content = modal.querySelector('[id^="modalContent"]') || modal.firstElementChild;
             modal.classList.remove('opacity-0', 'pointer-events-none');
             setTimeout(() => {
-            content.classList.remove('scale-90', 'opacity-0');
-            content.classList.add('scale-100', 'opacity-100');
-            // 🔁 Hook: refresh carousel layout when this modal opens
-            if (typeof refreshCarousel2 === 'function' && modalId === 'imageModal2') {
-                refreshCarousel2();
-            }
+              content.classList.remove('scale-90', 'opacity-0');
+              content.classList.add('scale-100', 'opacity-100');
+              // Refresh/init any carousels inside this modal
+              modal.querySelectorAll('.carousel').forEach(initCarousel);
+              modal.querySelectorAll('.carousel').forEach(updateCarousel);
             }, 10);
         }
         
         function closeModalById(modalId, contentId) {
             const modal = document.getElementById(modalId);
-            const content = document.getElementById(contentId);
+            const content = document.getElementById(contentId) || modal.firstElementChild;
             content.classList.remove('scale-100', 'opacity-100');
             content.classList.add('scale-90', 'opacity-0');
             setTimeout(() => {
-            modal.classList.add('opacity-0', 'pointer-events-none');
+              modal.classList.add('opacity-0', 'pointer-events-none');
             }, 300);
         }
         
@@ -421,134 +641,82 @@
             });
         });
         
-        /* ===== Carousel Logic (for #slides2 / #dots2) ===== */
-        (function () {
-            const carousels = {}; // state keyed by trackId
+        /* ===== Carousel Logic (scoped per modal; no global IDs) ===== */
+        const _carouselState = new WeakMap();
         
-            function setupDots(trackId, dotsId) {
-            const track = document.getElementById(trackId);
-            if (!track) return;
-            const count = track.children.length;
-            const dotsWrap = document.getElementById(dotsId);
-            if (!dotsWrap) return;
-            dotsWrap.innerHTML = '';
-            for (let i = 0; i < count; i++) {
-                const b = document.createElement('button');
-                b.type = 'button';
-                b.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 aria-[current=true]:bg-gray-800';
-                b.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                b.onclick = () => goTo(trackId, dotsId, i);
-                dotsWrap.appendChild(b);
-            }
-            }
-        
-            function update(trackId, dotsId) {
-            const state = carousels[trackId];
-            if (!state) return;
-            const { index } = state;
-            const track = document.getElementById(trackId);
-            if (!track) return;
-            // Use % transforms so it's responsive
-            track.style.transition = track.style.transition || ''; // keep CSS class-based transition
-            track.style.transform = `translateX(${index * -100}%)`;
-        
-            const dotsWrap = document.getElementById(dotsId);
-            if (!dotsWrap) return;
-            Array.from(dotsWrap.children).forEach((d, i) =>
-                d.setAttribute('aria-current', i === index ? 'true' : 'false')
-            );
-            }
-        
-            function clampIndex(trackId, i) {
-            const track = document.getElementById(trackId);
-            if (!track) return 0;
-            const count = track.children.length;
-            return Math.max(0, Math.min(i, count - 1));
-            }
-        
-            // Public API for buttons/dots
-            window.goTo = function (trackId, dotsId, i) {
-            carousels[trackId].index = clampIndex(trackId, i);
-            update(trackId, dotsId);
-            };
-            window.carouselNext = function (trackId, dotsId) {
-            const c = carousels[trackId]; if (!c) return;
-            goTo(trackId, dotsId, c.index + 1);
-            };
-            window.carouselPrev = function (trackId, dotsId) {
-            const c = carousels[trackId]; if (!c) return;
-            goTo(trackId, dotsId, c.index - 1);
-            };
-        
-            function attachSwipe(trackId, dotsId) {
-            const track = document.getElementById(trackId);
-            if (!track) return;
-        
-            let startX = 0, currentX = 0, isDragging = false;
-        
-            const onDown = (x) => { isDragging = true; startX = x; currentX = x; };
-            const onMove = (x) => {
-                if (!isDragging) return;
-                currentX = x;
-                const delta = currentX - startX;
-                const percent = (delta / track.clientWidth) * 100;
-                track.style.transition = 'none';
-                track.style.transform = `translateX(calc(${-carousels[trackId].index * 100}% + ${percent}%))`;
-            };
-            const onUp = () => {
-                if (!isDragging) return;
-                track.style.transition = ''; // restore CSS transitions
-                const delta = currentX - startX;
-                const threshold = track.clientWidth * 0.15;
-                if (delta < -threshold) window.carouselNext(trackId, dotsId);
-                else if (delta > threshold) window.carouselPrev(trackId, dotsId);
-                else update(trackId, dotsId);
-                isDragging = false;
-            };
-        
-            // Mouse
-            track.addEventListener('mousedown', e => { e.preventDefault(); onDown(e.clientX); });
-            window.addEventListener('mousemove', e => onMove(e.clientX));
-            window.addEventListener('mouseup', onUp);
-        
-            // Touch
-            track.addEventListener('touchstart', e => onDown(e.touches[0].clientX), { passive: true });
-            track.addEventListener('touchmove',  e => onMove(e.touches[0].clientX), { passive: true });
-            track.addEventListener('touchend',   onUp);
-            }
-        
-            function initCarousel(trackId, dotsId) {
-            if (!document.getElementById(trackId)) return;
-            carousels[trackId] = { index: 0 };
-            setupDots(trackId, dotsId);
-            update(trackId, dotsId);
-            attachSwipe(trackId, dotsId);
-            }
-        
-            // Initialize when DOM is ready
-            window.addEventListener('load', () => initCarousel('slides2', 'dots2'));
-        
-            // Keyboard nav only when the modal is visible
-            document.addEventListener('keydown', (e) => {
-            const modal = document.getElementById('imageModal2');
-            if (!modal) return;
-            const visible =
-                modal.classList.contains('!opacity-100') ||
-                (!modal.classList.contains('opacity-0') && !modal.classList.contains('pointer-events-none')) ||
-                modal.style.opacity === '1';
-            if (!visible) return;
-        
-            if (e.key === 'ArrowRight') window.carouselNext('slides2', 'dots2');
-            if (e.key === 'ArrowLeft')  window.carouselPrev('slides2', 'dots2');
+        function initCarousel(root){
+          if (_carouselState.has(root)) return; // already inited
+          const track = root.querySelector('.carousel-track');
+          const slides = Array.from(track.children);
+          const dots = root.querySelector('.carousel-dots');
+          _carouselState.set(root, { index: 0, track, slides, dots });
+          // build dots
+          if (dots){
+            dots.innerHTML = '';
+            slides.forEach((_, i) => {
+              const b = document.createElement('button');
+              b.type = 'button';
+              b.className = 'w-2.5 h-2.5 rounded-full bg-gray-300 aria-[current=true]:bg-gray-800';
+              b.setAttribute('aria-label', `Go to slide ${i+1}`);
+              b.addEventListener('click', () => goTo(root, i));
+              dots.appendChild(b);
             });
+          }
+          attachSwipe(root);
+          // wire arrows in same modal
+          const modal = root.closest('[id^="imageModal"]');
+          if (modal){
+            modal.querySelectorAll('.carousel-next').forEach(btn => btn.addEventListener('click', () => next(root)));
+            modal.querySelectorAll('.carousel-prev').forEach(btn => btn.addEventListener('click', () => prev(root)));
+            // keyboard when visible
+            document.addEventListener('keydown', (e) => {
+              const visible = !modal.classList.contains('opacity-0') && !modal.classList.contains('pointer-events-none');
+              if (!visible) return;
+              if (e.key === 'ArrowRight') next(root);
+              if (e.key === 'ArrowLeft')  prev(root);
+            });
+          }
+        }
         
-            // Expose a refresh helper to call after opening the modal
-            window.refreshCarousel2 = () => update('slides2', 'dots2');
-        })();
+        function updateCarousel(root){
+          const state = _carouselState.get(root); if (!state) return;
+          const { index, track, dots } = state;
+          track.style.transform = `translateX(${-index * 100}%)`;
+          if (dots) Array.from(dots.children).forEach((d,i)=> d.setAttribute('aria-current', i===index ? 'true':'false'));
+        }
+        function goTo(root, i){
+          const state = _carouselState.get(root); if (!state) return;
+          const max = state.slides.length - 1;
+          state.index = Math.max(0, Math.min(i, max));
+          updateCarousel(root);
+        }
+        function next(root){ const s=_carouselState.get(root); if (s) goTo(root, s.index+1); }
+        function prev(root){ const s=_carouselState.get(root); if (s) goTo(root, s.index-1); }
+        
+        function attachSwipe(root){
+          const state = _carouselState.get(root); if (!state) return;
+          const track = state.track;
+          let startX=0, currX=0, dragging=false;
+          const onDown = (x)=>{ dragging=true; startX=x; currX=x; track.style.transition='none'; };
+          const onMove = (x)=>{ if(!dragging) return; currX=x; const delta=currX-startX; const pct=(delta/track.clientWidth)*100; track.style.transform = `translateX(calc(${-_carouselState.get(root).index*100}% + ${pct}%))`; };
+          const onUp = ()=>{ if(!dragging) return; track.style.transition=''; const delta=currX-startX; const threshold=track.clientWidth*0.15; if(delta<-threshold) next(root); else if(delta>threshold) prev(root); else updateCarousel(root); dragging=false; };
+          track.addEventListener('mousedown', e=>{ e.preventDefault(); onDown(e.clientX); });
+          window.addEventListener('mousemove', e=> onMove(e.clientX));
+          window.addEventListener('mouseup', onUp);
+          track.addEventListener('touchstart', e=> onDown(e.touches[0].clientX), {passive:true});
+          track.addEventListener('touchmove',  e=> onMove(e.touches[0].clientX), {passive:true});
+          track.addEventListener('touchend',   onUp);
+        }
+        
+        // Optional: auto-init carousels on page load (works even before opening modals)
+        window.addEventListener('load', () => {
+          document.querySelectorAll('.carousel').forEach(initCarousel);
+          document.querySelectorAll('.carousel').forEach(updateCarousel);
+        });
         </script>
-            
-                    
-<!-- THIS IS A BREAKLINE FOR ALL SCIAM GRAPHICS WORK -->
+
+             
+<!-- THIS IS A BREAKLINE FOR GRAPHICS GALLERY -->
 
                     <!-- Story Item -->
                     <div class="relative group">
