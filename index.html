@@ -120,36 +120,6 @@
             background-color: black;
         }
 
-        
-        /* Mobile typography scaling */
-        @media (max-width: 640px) {
-            #imageModal0 p,
-            #imageModal1 p,
-            #imageModal2 p,
-            #imageModal3 p,
-            #imageModal4 p {
-            font-size: 0.8rem;     /* smaller text (~12.8px) */
-            }
-
-            #imageModal0 h3,
-            #imageModal1 h3,
-            #imageModal2 h3,
-            #imageModal3 h3,
-            #imageModal4 h3 {
-            font-size: 1rem;       /* reduce modal titles */
-            }
-
-            /* Optional: shrink button icons too */
-            #imageModal0 button,
-            #imageModal1 button,
-            #imageModal2 button,
-            #imageModal3 button,
-            #imageModal4 button {
-            width: 1.75rem;
-            height: 1.75rem;
-            font-size: 0.9rem;
-            }
-        }
 
                 
     </style>
@@ -245,10 +215,17 @@
         </div>
         
         <!-- 🔁 Graphic Item 4 Modal -->
-        <div id="imageModal4" class="fixed inset-0 bg-white bg-opacity-90 z-50 flex items-center justify-center 
-                opacity-0 pointer-events-none transition-opacity duration-300 px-4">
-        <div class="bg-white max-w-6xl w-full shadow overflow-hidden 
-                    flex flex-col md:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out" id="modalContent4">
+        <div id="imageModal4" class="fixed inset-0 bg-white bg-opacity-90 z-50
+            flex justify-center items-start md:items-center
+            overflow-y-auto px-4 py-6
+            opacity-0 pointer-events-none transition-opacity duration-300">
+
+        <div id="modalContent4"
+            class="bg-white max-w-6xl w-full shadow
+                    flex flex-col md:flex-row md:items-stretch
+                    transform scale-90 opacity-0 transition-all duration-500 ease-out
+                    md:h-[90svh] min-h-0">
+
             <!-- Left (Carousel) -->
             <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
             <div class="relative w-full carousel" data-index="0">
@@ -257,13 +234,13 @@
                 <!-- Track -->
                 <div class="flex transition-transform duration-300 ease-out carousel-track">
                     <!-- Slide 1 -->
-                    <div class="min-w-full flex items-center justify-center h-[60svh] md:h-auto">
+                    <div class="min-w-full flex items-center justify-center">
                         <img src="/image/social-disparities-extreme-heat-days_graphic_desktop.png"
                         class="max-h-[90vh] object-contain"
                         onclick="event.stopPropagation()" />
                     </div>
                     <!-- Slide 2 -->
-                    <div class="min-w-full flex items-center justify-center h-[60svh] md:h-auto">
+                    <div class="min-w-full flex items-center justify-center">
                         <img src="/image/social-disparities-extreme-heat-days_graphic_mobile.png"
                         class="max-h-[90vh] object-contain"
                         onclick="event.stopPropagation()" />
