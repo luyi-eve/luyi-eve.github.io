@@ -313,6 +313,108 @@
         </div>
         </div>
 
+        <!-- 🔁 Graphic Item 8 -->
+        <div class="relative group">
+            <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
+                onclick="openModalById('imageModal8')">
+            <img src="/image/leg-and-pedal_cover2.png" alt="Story Image" class="object-cover w-full h-full">
+            <a href="#">
+                <div class="absolute inset-0 bg-[#4b556380] opacity-0 group-hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-500 ease-in-out">
+                <p class="text-center px-4 text-[14px]">
+                    A graphic for Scientific American on a global study that reveals the perfect cities for bikes and walking.
+                </p>
+                <div class="mt-3 flex flex-wrap justify-center gap-1" style="max-width: 80%;">
+                    <span class="px-2 py-1 bg-white text-black rounded text-[10px]">Adobe Illustrator</span>
+                </div>
+                </div>
+            </a>
+            </div>
+            <div class="pt-4 text-center">
+            <h3 class="text-[16px] font-semibold">
+                Leg and Pedal
+            </h3>
+            <p class="text-[12px] text-gray-600 my-2">
+                November 2025 • <span class="bg-[#d9f9f4] px-1">Scientific American</span>
+            </p>
+            </div>
+        </div>
+
+        <!-- 🔁 Graphic Item 8 Modal -->
+        <div id="imageModal8" class="fixed inset-0 bg-white bg-opacity-90 z-50
+            flex justify-center items-start md:items-center
+            overflow-y-auto px-4 py-6
+            opacity-0 pointer-events-none transition-opacity duration-300">
+
+        <div id="modalContent7"
+            class="bg-white max-w-6xl w-full shadow
+                    flex flex-col md:flex-row md:items-stretch
+                    transform scale-90 opacity-0 transition-all duration-500 ease-out
+                    md:h-[90svh] min-h-0">
+
+            <!-- Left (Carousel) -->
+            <div class="w-full md:w-2/3 bg-white pl-4 pr-4 flex items-center justify-center">
+            <div class="relative w-full carousel" data-index="0">
+                <!-- Viewport -->
+                <div class="overflow-hidden rounded-lg">
+                <!-- Track -->
+                <div class="flex transition-transform duration-300 ease-out carousel-track">
+                    <!-- Slide 5 -->
+                    <div class="min-w-full flex items-center justify-center">
+                        <img src="/image/leg-and-pedal_print.jpg"
+                        class="max-h-[90vh] object-contain"
+                        onclick="event.stopPropagation()" />
+                    </div> 
+                    <!-- Slide 1 -->
+                    <div class="min-w-full flex items-center justify-center">
+                        <img src="/image/leg-and-pedal_desktop.png"
+                        class="max-h-[90vh] object-contain"
+                        onclick="event.stopPropagation()" />
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="min-w-full flex items-center justify-center">
+                        <img src="/image/leg-and-pedal_mobile.png"
+                        class="max-h-[90vh] object-contain"
+                        onclick="event.stopPropagation()" />
+                    </div>
+                    
+                </div>
+                </div>
+                <!-- <div class="flex items-center justify-center gap-2 mt-3 mb-6 carousel-dots"></div> -->
+            </div>
+            </div>
+
+            <!-- Right -->  
+            <!-- Arrows Row -->
+            <div class="w-full md:w-1/3 bg-white p-6 overflow-y-auto">
+                <div class="flex justify-start gap-2 mb-4">
+                    <button type="button"
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-prev"
+                            aria-label="Previous slide">
+                    &#10094;
+                    </button>
+
+                    <button type="button"
+                            class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-300 rounded-full shadow carousel-next"
+                            aria-label="Next slide">
+                    &#10095;
+                    </button>
+                </div>
+                <p class="text-sm text-gray-700 leading-relaxed pb-4 pt-2">                    
+                    For a Scientific American story <a href="https://www.scientificamerican.com/article/global-study-reveals-best-cities-for-walking-and-cycling/" 
+                    class="underline underline-offset-6"
+                    style="text-decoration-color: #adc4fe; text-decoration-thickness: 1px;">Leg and Pedal</a> by Jesse Greenspan, I designed the graphic using data from 11,587 cities and pinpointed the TOP 15 places across the world which one study found that are just better for bikes and pedestrians. The article was published in the December 2025 print issue as part of the magazine's Advances coverage.
+                </p>  
+                <p class="text-sm text-gray-700 leading-relaxed pb-4 pt-2">                    
+                    The dot plot shows the percentage of total kilometers traveled on foot and bicycle across cities in the 15 top countries for walking and cycling. Dots are display for the median, mean, 25th and 75th percentiles, and more outlying cities within each country.
+                </p>
+                <p id="modalText" class="text-sm text-gray-700 leading-relaxed pb-4">
+                    (Click the arrows to see print, desktop and mobile versions)
+                </p>
+
+            </div>
+        </div>
+        </div>
+
         <!-- 🔁 Graphic Item 9 -->
         <div class="relative group">
             <div class="aspect-w-1 aspect-h-1 bg-white border border-[#E4E4E7] overflow-hidden relative cursor-pointer"
